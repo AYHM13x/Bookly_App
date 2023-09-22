@@ -1,5 +1,7 @@
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/framework.dart';
 
 import '../../../../../constents.dart';
 import '../Custom_widgets/custom_app_bar.dart';
@@ -9,13 +11,20 @@ class SplashViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    debugPrint("width: ${MediaQuery.of(context).size.width}\n");
+    debugPrint("width: ${MediaQuery.of(context).size.width}");
     debugPrint("height: ${MediaQuery.of(context).size.height}");
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Image.asset(AssetsData.logo),
+        const SizedBox(
+          height: 4,
+        ),
+        const Text(
+          "Read Book for Free",
+          textAlign: TextAlign.center,
+        ),
       ],
     );
   }
