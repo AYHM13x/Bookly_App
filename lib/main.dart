@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import 'Features/Splash/presentation/views/splash_view.dart';
 import 'constents.dart';
+import 'core/utils/assets.dart';
 
 void main() {
   runApp(const BooklyApp());
@@ -17,7 +18,7 @@ class BooklyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
         scaffoldBackgroundColor: kPrimaryColor,
-        fontFamily: kFontFamily,
+        fontFamily: AssetsData.familyOfFont,
       ),
       debugShowCheckedModeBanner: false,
       home: const SplashView(),

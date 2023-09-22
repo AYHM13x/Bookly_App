@@ -1,3 +1,4 @@
+import 'package:bookly_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../constents.dart';
@@ -13,11 +14,11 @@ class SplashViewBody extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           CustomAppBar(
             image: Image.asset(
-              kLogo,
+              AssetsData.logo,
               width: 100,
               height: 100,
             ),
@@ -37,12 +38,15 @@ class SplashViewBody extends StatelessWidget {
               },
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           const Text(
             "Best Seller",
-            style: TextStyle(color: kSecondryColor, fontSize: 28),
+            style: TextStyle(
+              color: kSecondryColor,
+              fontSize: 28,
+            ),
           )
         ],
       ),
@@ -56,8 +60,7 @@ class BookCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      "${kAssetsFolder}test_image.png",
-      height: 250,
+      "${AssetsData.assetsFolder}test_image.png",
     );
   }
 }
