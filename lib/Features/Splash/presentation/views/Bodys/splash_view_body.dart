@@ -5,9 +5,46 @@ import 'package:flutter/src/widgets/framework.dart';
 
 import '../../../../../constents.dart';
 import '../Custom_widgets/custom_app_bar.dart';
+import '../widgets/animated_text_in_splash_view_body.dart';
 
-class SplashViewBody extends StatelessWidget {
+class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
+
+  @override
+  State<SplashViewBody> createState() => _SplashViewBodyState();
+}
+
+class _SplashViewBodyState extends State<SplashViewBody>
+    with SingleTickerProviderStateMixin {
+  late AnimationController animationController;
+  late Animation<Offset> slidingUpAnimation;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 2),
+    );
+
+    slidingUpAnimation =
+        Tween<Offset>(begin: const Offset(0, 20), end: Offset.zero)
+            .animate(animationController);
+
+    animationController.forward();
+    // slidingUpAnimation.addListener(() {
+    //   setState(() {});
+    // });
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    animationController.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +58,7 @@ class SplashViewBody extends StatelessWidget {
         const SizedBox(
           height: 4,
         ),
-        const Text(
-          "Read Book for Free",
-          textAlign: TextAlign.center,
-        ),
+        AnimatedTextInSplashViewBody(slidingUpAnimation: slidingUpAnimation),
       ],
     );
   }
