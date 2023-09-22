@@ -11,6 +11,23 @@ class SplashViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     debugPrint("width: ${MediaQuery.of(context).size.width}\n");
     debugPrint("height: ${MediaQuery.of(context).size.height}");
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Image.asset(AssetsData.logo),
+      ],
+    );
+  }
+}
+
+class HomeView extends StatelessWidget {
+  const HomeView({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
@@ -34,7 +51,7 @@ class SplashViewBody extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: 50,
               itemBuilder: (context, index) {
-                return const BookCard();
+                return GestureDetector(child: const BookCard());
               },
             ),
           ),
@@ -55,7 +72,9 @@ class SplashViewBody extends StatelessWidget {
 }
 
 class BookCard extends StatelessWidget {
-  const BookCard({super.key});
+  const BookCard({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
