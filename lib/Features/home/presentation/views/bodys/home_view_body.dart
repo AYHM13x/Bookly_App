@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../constents.dart';
 import '../../../../../core/utils/assets.dart';
@@ -16,19 +17,14 @@ class HomeViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          CustomAppBar(
-            image: Image.asset(
-              AssetsData.logo,
-              width: 100,
-              height: 100,
-            ),
-            icon: const Icon(
+          const CustomAppBar(
+            image: AssetsData.logo,
+            icon: Icon(
               Icons.search,
               color: kSecondryColor,
             ),
           ),
           SizedBox(
-            width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height / 3,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,

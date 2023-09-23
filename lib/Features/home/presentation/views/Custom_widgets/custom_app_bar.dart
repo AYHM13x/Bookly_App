@@ -4,26 +4,33 @@ import 'custom_app_bar_icon_button.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar(
-      {super.key, required this.image, required this.icon, this.onPressed});
-  final Image image;
+      {super.key,
+      required this.image,
+      required this.icon,
+      this.onPressedOnIcon});
+  final String image;
   final Icon icon;
-  final Function()? onPressed;
+  final Function()? onPressedOnIcon;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        //title of app bar
-        image,
-        SizedBox(
-          width: MediaQuery.of(context).size.width / 2,
-        ),
-        //icon in app bar
-        CustomAppBarIconButton(
-          icon: icon,
-          onPressed: onPressed,
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20),
+      child: Row(
+        children: [
+          //title of app bar
+          Image.asset(
+            image,
+            width: 100,
+            height: 41,
+          ),
+          const Spacer(),
+          //icon in app bar
+          CustomAppBarIconButton(
+            icon: icon,
+            onPressed: onPressedOnIcon,
+          ),
+        ],
+      ),
     );
   }
 }
