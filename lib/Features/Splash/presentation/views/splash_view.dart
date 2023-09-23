@@ -10,10 +10,7 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(18.0),
-        child: SplashViewBody(),
-      ),
+      body: SplashViewBody(),
     );
   }
 }
