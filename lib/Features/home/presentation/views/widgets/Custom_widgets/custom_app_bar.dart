@@ -1,3 +1,4 @@
+import 'package:bookly_app/core/utils/dimensions_of_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'custom_app_bar_icon_button.dart';
@@ -14,7 +15,8 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20),
+      padding: EdgeInsets.symmetric(
+          vertical: DimensionsOfScreen.dimensionsOfHeight(context, 2)),
       child: Row(
         children: [
           //title of app bar

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../../constents.dart';
 import '../../../../../core/utils/assets.dart';
-import '../Custom_widgets/custom_app_bar.dart';
-import '../Custom_widgets/custom_book_card.dart';
+import '../widgets/Custom_widgets/custom_app_bar.dart';
+import '../widgets/book_cards_list.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({
@@ -23,7 +23,7 @@ class HomeViewBody extends StatelessWidget {
               color: kSecondryColor,
             ),
           ),
-          const CustomBookCard(),
+          const BookCardsList(),
           const SizedBox(
             height: 32,
           ),
@@ -42,15 +42,3 @@ class HomeViewBody extends StatelessWidget {
     );
   }
 }
-
-
-
-// ListView.builder(
-//         scrollDirection: Axis.horizontal,
-//         itemCount: 20,
-//         itemBuilder: (context, index) {
-//           return GestureDetector(child: const BookCard());
-//         },
-//       )
-
-
