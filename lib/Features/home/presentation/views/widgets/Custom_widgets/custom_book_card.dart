@@ -16,7 +16,7 @@ class CustomBookCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           image: const DecorationImage(
             fit: BoxFit.fill,
-            image: AssetImage("${AssetsData.assetsFolder}test_image.png"),
+            image: AssetImage(AssetsData.testImage),
           ),
         ),
       ),

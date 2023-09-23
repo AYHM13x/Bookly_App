@@ -16,11 +16,14 @@ class BookCardsList extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: 20,
         itemBuilder: (context, index) {
-          return GestureDetector(
-            onTap: () {
-              debugPrint(index.toString());
-            },
-            child: const CustomBookCard(),
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 4),
+            child: GestureDetector(
+              onTap: () {
+                debugPrint(index.toString());
+              },
+              child: const CustomBookCard(),
+            ),
           );
         },
       ),

@@ -38,8 +38,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   @override
   Widget build(BuildContext context) {
-    debugPrint("width: ${MediaQuery.of(context).size.width}");
-    debugPrint("height: ${MediaQuery.of(context).size.height}");
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,

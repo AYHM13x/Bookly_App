@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../../constents.dart';
 import '../../../../../core/utils/assets.dart';
+import '../../../../../core/utils/dimensions_of_screen.dart';
+import '../../../../../core/utils/styles.dart';
 import '../widgets/Custom_widgets/custom_app_bar.dart';
 import '../widgets/book_cards_list.dart';
 
@@ -15,6 +17,7 @@ class HomeViewBody extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const CustomAppBar(
             image: AssetsData.logo,
@@ -24,18 +27,12 @@ class HomeViewBody extends StatelessWidget {
             ),
           ),
           const BookCardsList(),
-          const SizedBox(
-            height: 32,
+          SizedBox(
+            height: DimensionsOfScreen.dimensionsOfHeight(context, 7),
           ),
-          Container(
-            alignment: Alignment.centerLeft,
-            child: const Text(
-              "Best Seller",
-              style: TextStyle(
-                color: kSecondryColor,
-                fontSize: 28,
-              ),
-            ),
+          const Text(
+            "Best Seller",
+            style: Styles.titleMeduim,
           )
         ],
       ),
