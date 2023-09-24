@@ -11,7 +11,7 @@ class BookCardsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: DimensionsOfScreen.dimensionsOfHeight(context, 35),
+      height: DimensionsOfScreen.dimensionsOfHeight(context, 28),
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: 20,

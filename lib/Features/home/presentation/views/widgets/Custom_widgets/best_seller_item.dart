@@ -9,16 +9,14 @@ class BestSellerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //debugPrint(DimensionsOfScreen.dimensionsOfWidth(context, 4).toString());
     return Row(
       mainAxisSize: MainAxisSize.max,
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const ImageOfBestSellerItem(),
         SizedBox(
           width: DimensionsOfScreen.dimensionsOfWidth(context, 4),
         ),
-        const DetailsOfBestSellerItem()
+        const DetailsOfBestSellerItem(),
       ],
     );
   }

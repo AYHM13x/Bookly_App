@@ -9,12 +9,21 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Padding(
-      padding: EdgeInsets.symmetric(
-        vertical: DimensionsOfScreen.dimensionsOfHeight(context, 2),
-        horizontal: DimensionsOfScreen.dimensionsOfWidth(context, 5),
+      body: Padding(
+        padding: EdgeInsets.only(
+          bottom: 0,
+          top: DimensionsOfScreen.dimensionsOfHeight(context, 2),
+          right: DimensionsOfScreen.dimensionsOfWidth(context, 2.5),
+          left: DimensionsOfScreen.dimensionsOfWidth(context, 2.5),
+        ),
+        child: const HomeViewBody(),
       ),
-      child: const HomeViewBody(),
-    ));
+    );
   }
 }
+
+
+// EdgeInsets.symmetric(
+//         vertical: DimensionsOfScreen.dimensionsOfHeight(context, 2),
+//         horizontal: DimensionsOfScreen.dimensionsOfWidth(context, 2.5),
+//       )
