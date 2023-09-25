@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/dimensions_of_screen.dart';
-import 'Custom_widgets/custom_book_card.dart';
+import 'Custom_widgets/book_card_item.dart';
 
 class BookCardsList extends StatelessWidget {
   const BookCardsList({

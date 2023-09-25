@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'custom_app_bar_icon_button.dart';
 
-class CustomAppBar extends StatelessWidget {
-  const CustomAppBar(
+class BookCardItem extends StatelessWidget {
+  const BookCardItem(
       {super.key,
       required this.image,
       required this.icon,

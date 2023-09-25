@@ -20,7 +20,7 @@ class HomeViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const CustomAppBar(
+          const BookCardItem(
             image: AssetsData.logo,
             icon: Icon(
               Icons.search,

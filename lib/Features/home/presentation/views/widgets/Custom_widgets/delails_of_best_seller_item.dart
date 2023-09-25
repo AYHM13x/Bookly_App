@@ -1,9 +1,8 @@
-import 'package:bookly_app/core/utils/dimensions_of_screen.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../constents.dart';
-import 'price_and_rate_of_best_seller_item.dart';
+import 'price_and_rating_of_best_seller_item.dart';
 
 class DetailsOfBestSellerItem extends StatelessWidget {
   const DetailsOfBestSellerItem({
@@ -12,8 +11,7 @@ class DetailsOfBestSellerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: DimensionsOfScreen.dimensionsOfWidth(context, 66),
+    return Expanded(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -27,7 +25,7 @@ class DetailsOfBestSellerItem extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 3,
+            height: 4,
           ),
           Text(
             "J.K. Rowling",
