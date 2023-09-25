@@ -20,11 +20,11 @@ class DetailsOfBestSellerItem extends StatelessWidget {
             isThreeLine: true,
             title: Text(
               "Title of the Book first book",
-              style: Styles.titleOfBook,
+              style: Styles.titleOfBook24w400,
             ),
             subtitle: Text(
               "Auther of the Book first book",
-              style: Styles.autherOfBook,
+              style: Styles.textStyle14w500grey,
             ),
           ),
           SizedBox(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../core/utils/dimensions_of_screen.dart';
 import '../../../../../../core/utils/styles.dart';
 
 class PriceAndRateOfBestSellerItem extends StatelessWidget {
@@ -8,29 +7,32 @@ class PriceAndRateOfBestSellerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Text(
           "19.99\$",
-          style: Styles.priceOfBook,
+          style: Styles.textStyle20.copyWith(fontWeight: FontWeight.w700),
         ),
-        SizedBox(
+        const SizedBox(
           width: 0,
         ),
         Row(
           children: [
-            Icon(
+            const Icon(
               Icons.star,
               color: Colors.yellow,
             ),
             Text(
               "4.5",
-              style: Styles.rateOfBook,
+              style: Styles.textStyle20.copyWith(fontWeight: FontWeight.w500),
             ),
             Text(
               " (4533)",
-              style: Styles.numberOfRaterOfBook,
+              style: Styles.textStyle20.copyWith(
+                color: Colors.grey,
+                fontWeight: FontWeight.w400,
+              ),
             ),
           ],
         ),

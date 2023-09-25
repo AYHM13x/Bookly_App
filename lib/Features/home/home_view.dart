@@ -13,17 +13,11 @@ class HomeView extends StatelessWidget {
         padding: EdgeInsets.only(
           bottom: 0,
           top: DimensionsOfScreen.dimensionsOfHeight(context, 2),
-          right: DimensionsOfScreen.dimensionsOfWidth(context, 2.5),
-          left: DimensionsOfScreen.dimensionsOfWidth(context, 2.5),
+          right: DimensionsOfScreen.dimensionsOfWidth(context, 3),
+          left: DimensionsOfScreen.dimensionsOfWidth(context, 3),
         ),
         child: const HomeViewBody(),
       ),
     );
   }
 }
-
-
-// EdgeInsets.symmetric(
-//         vertical: DimensionsOfScreen.dimensionsOfHeight(context, 2),
-//         horizontal: DimensionsOfScreen.dimensionsOfWidth(context, 2.5),
-//       )
