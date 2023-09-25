@@ -16,7 +16,7 @@ class BestSellerItem extends StatelessWidget {
         children: [
           const ImageOfBestSellerItem(),
           SizedBox(
-            width: DimensionsOfScreen.dimensionsOfWidth(context, 4),
+            width: DimensionsOfScreen.dimensionsOfWidth(context, 5),
           ),
           const DetailsOfBestSellerItem(),
         ],

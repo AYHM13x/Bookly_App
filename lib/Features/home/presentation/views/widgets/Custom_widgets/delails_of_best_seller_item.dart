@@ -2,6 +2,7 @@ import 'package:bookly_app/core/utils/dimensions_of_screen.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../../constents.dart';
 import 'price_and_rate_of_best_seller_item.dart';
 
 class DetailsOfBestSellerItem extends StatelessWidget {
@@ -14,23 +15,28 @@ class DetailsOfBestSellerItem extends StatelessWidget {
     return SizedBox(
       width: DimensionsOfScreen.dimensionsOfWidth(context, 66),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ListTile(
-            isThreeLine: true,
-            title: const Text(
-              "Harry Potter and the Goblet of Fire",
-              style: Styles.textStyle20,
-            ),
-            subtitle: Text(
-              "J.K. Rowling",
-              style: Styles.textStyle14.copyWith(
-                fontWeight: FontWeight.w500,
-              ),
+          Text(
+            "Harry Potter and the Goblet of Fire",
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: Styles.textStyle20.copyWith(
+              fontFamily: kGTSectraFine,
+              fontWeight: FontWeight.w400,
             ),
           ),
           const SizedBox(
-            height: 5,
+            height: 3,
+          ),
+          Text(
+            "J.K. Rowling",
+            style: Styles.textStyle14.copyWith(
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          const SizedBox(
+            height: 8,
           ),
           const PriceAndRateOfBestSellerItem(),
         ],

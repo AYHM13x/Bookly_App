@@ -1,5 +1,7 @@
+import 'package:bookly_app/core/utils/dimensions_of_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../../constents.dart';
 import '../../../../../../core/utils/styles.dart';
 
 class PriceAndRateOfBestSellerItem extends StatelessWidget {
@@ -8,20 +10,20 @@ class PriceAndRateOfBestSellerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Text(
-          "19.99\$",
+        const Text(
+          "19.99$kEuroSympol",
           style: Styles.textStyle20,
         ),
-        const SizedBox(
-          width: 0,
+        SizedBox(
+          width: DimensionsOfScreen.dimensionsOfWidth(context, 20),
         ),
         Row(
           children: [
             const Icon(
-              Icons.star,
-              color: Colors.yellow,
+              Icons.star_rounded,
+              color: kColorOfStar,
             ),
             const Text(
               "4.5",

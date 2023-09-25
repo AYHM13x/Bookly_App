@@ -16,7 +16,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
+      clipBehavior: Clip.none,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -31,7 +31,7 @@ class HomeViewBody extends StatelessWidget {
           SizedBox(
             height: DimensionsOfScreen.dimensionsOfHeight(context, 5),
           ),
-          Text(
+          const Text(
             "Best Seller",
             style: Styles.textStyle18,
           ),

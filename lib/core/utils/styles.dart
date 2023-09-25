@@ -18,17 +18,12 @@ abstract class Styles {
   );
   static const textStyle20 = TextStyle(
     fontSize: 20,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.bold,
   );
   //titles of book
-  static const textStyle24 = TextStyle(
-    fontFamily: kGTSectraFine,
-    fontSize: 20,
-    fontWeight: FontWeight.w400,
-  );
   static const textStyle30 = TextStyle(
     fontFamily: kGTSectraFine,
     fontSize: 30,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.normal,
   );
 }

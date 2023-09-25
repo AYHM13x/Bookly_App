@@ -11,7 +11,7 @@ class BestSellerList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: DimensionsOfScreen.dimensionsOfHeight(context, 100),
+      height: DimensionsOfScreen.dimensionsOfHeight(context, 49.236),
       child: ListView.builder(
         itemCount: 20,
         itemBuilder: (context, index) {
