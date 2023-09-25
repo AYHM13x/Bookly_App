@@ -1,20 +1,34 @@
 import 'package:flutter/material.dart';
 
 import '../../constents.dart';
-import 'assets.dart';
 
 abstract class Styles {
-  static const textStyle20 = TextStyle(
-    fontSize: 20,
-  );
-  static const titleOfBook24w400 = TextStyle(
-    fontFamily: kGTSectraFine,
-    fontSize: 24,
-    fontWeight: FontWeight.w400,
-  );
-  static const textStyle14w500grey = TextStyle(
-    fontWeight: FontWeight.w500,
+  //best seller text
+  static const textStyle14 = TextStyle(
     fontSize: 14,
     color: Colors.grey,
+  );
+  static const textStyle16 = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+  );
+  static const textStyle18 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+  );
+  static const textStyle20 = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.w700,
+  );
+  //titles of book
+  static const textStyle24 = TextStyle(
+    fontFamily: kGTSectraFine,
+    fontSize: 20,
+    fontWeight: FontWeight.w400,
+  );
+  static const textStyle30 = TextStyle(
+    fontFamily: kGTSectraFine,
+    fontSize: 30,
+    fontWeight: FontWeight.w400,
   );
 }

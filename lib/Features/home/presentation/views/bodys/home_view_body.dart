@@ -33,12 +33,10 @@ class HomeViewBody extends StatelessWidget {
           ),
           Text(
             "Best Seller",
-            style: Styles.textStyle20.copyWith(
-              fontWeight: FontWeight.w600,
-            ),
+            style: Styles.textStyle18,
           ),
-          SizedBox(
-            height: DimensionsOfScreen.dimensionsOfHeight(context, 2),
+          const SizedBox(
+            height: 16,
           ),
           const BestSellerList(),
         ],

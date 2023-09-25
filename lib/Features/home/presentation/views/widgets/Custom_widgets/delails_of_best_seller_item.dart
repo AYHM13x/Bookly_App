@@ -13,24 +13,26 @@ class DetailsOfBestSellerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: DimensionsOfScreen.dimensionsOfWidth(context, 66),
-      child: const Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           ListTile(
             isThreeLine: true,
-            title: Text(
-              "Title of the Book first book",
-              style: Styles.titleOfBook24w400,
+            title: const Text(
+              "Harry Potter and the Goblet of Fire",
+              style: Styles.textStyle20,
             ),
             subtitle: Text(
-              "Auther of the Book first book",
-              style: Styles.textStyle14w500grey,
+              "J.K. Rowling",
+              style: Styles.textStyle14.copyWith(
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
-          PriceAndRateOfBestSellerItem(),
+          const PriceAndRateOfBestSellerItem(),
         ],
       ),
     );

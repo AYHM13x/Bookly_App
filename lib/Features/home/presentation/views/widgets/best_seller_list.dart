@@ -17,16 +17,11 @@ class BestSellerList extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 4),
-            child: Padding(
-              padding: EdgeInsets.only(
-                bottom: DimensionsOfScreen.dimensionsOfHeight(context, 3),
-              ),
-              child: GestureDetector(
-                onTap: () {
-                  debugPrint(index.toString());
-                },
-                child: const BestSellerItem(),
-              ),
+            child: GestureDetector(
+              onTap: () {
+                debugPrint(index.toString());
+              },
+              child: const BestSellerItem(),
             ),
           );
         },

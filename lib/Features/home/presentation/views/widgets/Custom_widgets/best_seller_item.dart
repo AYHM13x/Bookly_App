@@ -9,15 +9,18 @@ class BestSellerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.max,
-      children: [
-        const ImageOfBestSellerItem(),
-        SizedBox(
-          width: DimensionsOfScreen.dimensionsOfWidth(context, 4),
-        ),
-        const DetailsOfBestSellerItem(),
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          const ImageOfBestSellerItem(),
+          SizedBox(
+            width: DimensionsOfScreen.dimensionsOfWidth(context, 4),
+          ),
+          const DetailsOfBestSellerItem(),
+        ],
+      ),
     );
   }
 }

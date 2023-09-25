@@ -9,14 +9,17 @@ class CustomAppBar extends StatelessWidget {
       required this.image,
       required this.icon,
       this.onPressedOnIcon});
+
   final String image;
   final Icon icon;
   final Function()? onPressedOnIcon;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(
-          vertical: DimensionsOfScreen.dimensionsOfHeight(context, 2)),
+      padding: EdgeInsets.only(
+          bottom: DimensionsOfScreen.dimensionsOfHeight(context, 2),
+          top: DimensionsOfScreen.dimensionsOfHeight(context, 4)),
       child: Row(
         children: [
           //title of app bar

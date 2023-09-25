@@ -12,7 +12,7 @@ class PriceAndRateOfBestSellerItem extends StatelessWidget {
       children: [
         Text(
           "19.99\$",
-          style: Styles.textStyle20.copyWith(fontWeight: FontWeight.w700),
+          style: Styles.textStyle20,
         ),
         const SizedBox(
           width: 0,
@@ -23,14 +23,16 @@ class PriceAndRateOfBestSellerItem extends StatelessWidget {
               Icons.star,
               color: Colors.yellow,
             ),
-            Text(
+            const Text(
               "4.5",
-              style: Styles.textStyle20.copyWith(fontWeight: FontWeight.w500),
+              style: Styles.textStyle16,
+            ),
+            const SizedBox(
+              width: 5,
             ),
             Text(
-              " (4533)",
-              style: Styles.textStyle20.copyWith(
-                color: Colors.grey,
+              "(4533)",
+              style: Styles.textStyle14.copyWith(
                 fontWeight: FontWeight.w400,
               ),
             ),
