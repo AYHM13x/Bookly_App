@@ -37,7 +37,12 @@ class HomeViewBody extends StatelessWidget {
                   ),
                 ),
               ),
-              const BookCardsListView(),
+              SizedBox(
+                height: DimensionsOfScreen.dimensionsOfHeight(context, 28),
+                child: const BookCardsListView(
+                  horizontalPaddingBetweenItems: 12,
+                ),
+              ),
               const SizedBox(
                 height: 36,
               ),

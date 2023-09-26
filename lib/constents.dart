@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'core/utils/dimensions_of_screen.dart';
 
 const kPrimaryColor = Color(0xff100B20);
 const kWhiteColor = Color(0xffffffff);
@@ -12,3 +13,4 @@ const kGTSectraFine = "GT Sectra Fine";
 const kMontserrat = "Montserrat";
 const kRoboto = "Roboto";
 const kEuroSympol = "€";
+const kBorderRadiusValue = 15.0;

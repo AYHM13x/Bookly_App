@@ -11,10 +11,10 @@ class BookDetailsView extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.only(
-          bottom: DimensionsOfScreen.dimensionsOfHeight(context, 2),
-          top: DimensionsOfScreen.dimensionsOfHeight(context, 4),
-          right: DimensionsOfScreen.dimensionsOfWidth(context, 3),
-          left: DimensionsOfScreen.dimensionsOfWidth(context, 3),
+          bottom: DimensionsOfScreen.dimensionsOfHeight(context, 0),
+          top: DimensionsOfScreen.dimensionsOfHeight(context, 2),
+          right: DimensionsOfScreen.dimensionsOfWidth(context, 5),
+          left: DimensionsOfScreen.dimensionsOfWidth(context, 5),
         ),
         child: const BookDetailsViewBody(),
       ),
