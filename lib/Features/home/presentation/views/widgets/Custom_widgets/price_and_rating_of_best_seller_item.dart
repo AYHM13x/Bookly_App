@@ -17,10 +17,6 @@ class PriceAndRateOfBestSellerItem extends StatelessWidget {
           style: Styles.textStyle20,
         ),
         Spacer(),
-        Icon(
-          Icons.star_rounded,
-          color: kColorOfStar,
-        ),
         SizedBox(
           width: 6,
         ),

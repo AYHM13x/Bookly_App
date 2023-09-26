@@ -6,7 +6,6 @@ abstract class Styles {
   //best seller text
   static const textStyle14 = TextStyle(
     fontSize: 14,
-    color: Colors.grey,
   );
   static const textStyle16 = TextStyle(
     fontSize: 16,

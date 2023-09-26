@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import '../../../../../constents.dart';
 import '../../../../../core/utils/dimensions_of_screen.dart';
+import '../../../book_details_view.dart';
 import 'Custom_widgets/book_card_item.dart';
 
-class BookCardsList extends StatelessWidget {
-  const BookCardsList({
+class BookCardsListView extends StatelessWidget {
+  const BookCardsListView({
     super.key,
   });
 
@@ -17,12 +20,15 @@ class BookCardsList extends StatelessWidget {
         itemCount: 20,
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 4),
+            padding: const EdgeInsets.symmetric(horizontal: 12),
             child: GestureDetector(
               onTap: () {
                 debugPrint(index.toString());
+                Get.to(() => const BookDetailsView(),
+                    transition: Transition.fadeIn,
+                    duration: kNavigationToNextView);
               },
-              child: const CustomBookCard(),
+              child: const BookCardItemView(),
             ),
           );
         },

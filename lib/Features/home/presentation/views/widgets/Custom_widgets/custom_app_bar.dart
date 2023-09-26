@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 
 import 'custom_app_bar_icon_button.dart';
 
-class BookCardItem extends StatelessWidget {
-  const BookCardItem(
+class CustomAppBar extends StatelessWidget {
+  const CustomAppBar(
       {super.key,
-      required this.image,
+      required this.firstWidget,
       required this.icon,
       this.onPressedOnIcon});
 
-  final String image;
+  final Widget firstWidget;
   final Icon icon;
   final Function()? onPressedOnIcon;
 
@@ -23,14 +23,10 @@ class BookCardItem extends StatelessWidget {
       child: Row(
         children: [
           //title of app bar
-          Image.asset(
-            image,
-            width: 100,
-            height: 41,
-          ),
+          firstWidget,
           const Spacer(),
           //icon in app bar
-          CustomAppBarIconButton(
+          CustomIconButton(
             icon: icon,
             onPressed: onPressedOnIcon,
           ),

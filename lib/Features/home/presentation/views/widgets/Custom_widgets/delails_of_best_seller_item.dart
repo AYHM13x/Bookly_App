@@ -31,6 +31,7 @@ class DetailsOfBestSellerItem extends StatelessWidget {
             "J.K. Rowling",
             style: Styles.textStyle14.copyWith(
               fontWeight: FontWeight.w500,
+              color: kGreyColor,
             ),
           ),
           const SizedBox(

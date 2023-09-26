@@ -47,3 +47,18 @@ SizedBox(
               style: Styles.textStyle14.copyWith(
                 fontWeight: FontWeight.w500,
               ),)
+
+ padding: EdgeInsets.only(
+          bottom: 0,
+          top: DimensionsOfScreen.dimensionsOfHeight(context, 2),
+          right: DimensionsOfScreen.dimensionsOfWidth(context, 3),
+          left: DimensionsOfScreen.dimensionsOfWidth(context, 3),
+        ),
+
+
+
+        Image.asset(
+            firstWidget,
+            width: 100,
+            height: 41,
+          )

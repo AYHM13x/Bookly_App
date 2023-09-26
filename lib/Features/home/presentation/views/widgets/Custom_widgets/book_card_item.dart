@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/assets.dart';
 
-class CustomBookCard extends StatelessWidget {
-  const CustomBookCard({
+class BookCardItemView extends StatelessWidget {
+  const BookCardItemView({
     super.key,
   });
 
