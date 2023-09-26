@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../constents.dart';
-import '../../../book_details_view.dart';
 import 'Custom_widgets/best_seller_item.dart';
 
 class BestSellerListView extends StatelessWidget {
@@ -23,9 +22,10 @@ class BestSellerListView extends StatelessWidget {
           child: GestureDetector(
             onTap: () {
               debugPrint(index.toString());
-              Get.to(() => const BookDetailsView(),
-                  transition: Transition.fadeIn,
-                  duration: kNavigationToNextView);
+              // Get.to(() => const BookDetailsView(),
+              //     transition: Transition.fadeIn,
+              //     duration: kNavigationToNextView);
+              GoRouter.of(context).push(kBookDetailsViewPath);
             },
             child: const BestSellerItemView(),
           ),

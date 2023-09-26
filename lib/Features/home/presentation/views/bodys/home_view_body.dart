@@ -31,7 +31,7 @@ class HomeViewBody extends StatelessWidget {
                     height: 41,
                     width: 100,
                   ),
-                  icon: const Icon(
+                  secondWidget: const Icon(
                     Icons.search,
                     color: kWhiteColor,
                   ),
