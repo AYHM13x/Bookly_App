@@ -15,6 +15,7 @@ class BooklyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      title: "Bookly App",
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         brightness: Brightness.dark,
