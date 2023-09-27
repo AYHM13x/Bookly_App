@@ -1,9 +1,9 @@
-import 'package:bookly_app/core/utils/dimensions_of_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../../constents.dart';
-import 'custom_icon_button.dart';
+import '../../../../../../core/utils/app_colors.dart';
+import '../../../../../../core/utils/dimensions_of_screen.dart';
+import '../../../../../../core/widgets/custom_icon_button.dart';
 
 class CustomBookDetailAppBar extends StatelessWidget {
   const CustomBookDetailAppBar({
@@ -24,7 +24,7 @@ class CustomBookDetailAppBar extends StatelessWidget {
           CustomIconButton(
             icon: const Icon(
               Icons.close,
-              color: kWhiteColor,
+              color: AppColors.whiteColor,
             ),
             onPressed: () {
               //Get.back();

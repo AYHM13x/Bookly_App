@@ -1,7 +1,7 @@
-import 'package:bookly_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../../core/utils/app_router.dart';
 import 'Custom_widgets/book_card_item.dart';
 
 class BookCardsListView extends StatelessWidget {

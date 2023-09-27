@@ -1,7 +1,7 @@
-import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../constents.dart';
+import '../../../../../../core/utils/styles.dart';
 import 'price_and_rating_of_best_seller_item.dart';
 
 class DetailsOfBestSellerItem extends StatelessWidget {
@@ -27,11 +27,14 @@ class DetailsOfBestSellerItem extends StatelessWidget {
           const SizedBox(
             height: 4,
           ),
-          Text(
-            "J.K. Rowling",
-            style: Styles.textStyle14.copyWith(
-              fontWeight: FontWeight.w500,
-              color: kGreyColor,
+          Opacity(
+            opacity: .7,
+            child: Text(
+              "J.K. Rowling",
+              style: Styles.textStyle14.copyWith(
+                fontWeight: FontWeight.w500,
+                fontStyle: FontStyle.italic,
+              ),
             ),
           ),
           const SizedBox(

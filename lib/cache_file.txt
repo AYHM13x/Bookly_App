@@ -62,3 +62,49 @@ SizedBox(
             width: 100,
             height: 41,
           )
+
+
+
+
+
+           GestureDetector(
+          onTap: () {},
+          child: Container(
+            height: height,
+            width: width,
+            alignment: Alignment.center,
+            decoration: const BoxDecoration(
+                color: AppColors.whiteColor,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(kBorderRadiusValue),
+                    bottomLeft: Radius.circular(kBorderRadiusValue))),
+            child: Text(
+              "19.99$kEuroSympol",
+              style: Styles.textStyle18.copyWith(
+                fontWeight: FontWeight.w600,
+                color: AppColors.primaryColor,
+              ),
+            ),
+          ),
+        ),
+        GestureDetector(
+          onTap: () {},
+          child: Container(
+            height: height,
+            width: width,
+            alignment: Alignment.center,
+            decoration: const BoxDecoration(
+                color: AppColors.orangeColor,
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(kBorderRadiusValue),
+                    bottomRight: Radius.circular(kBorderRadiusValue))),
+            child: Text(
+              "Free preview",
+              style: Styles.textStyle16.copyWith(
+                fontFamily: kRoboto,
+                fontWeight: FontWeight.normal,
+                color: AppColors.whiteColor,
+              ),
+            ),
+          ),
+        ),

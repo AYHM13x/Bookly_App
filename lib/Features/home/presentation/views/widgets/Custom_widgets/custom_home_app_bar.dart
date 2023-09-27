@@ -1,8 +1,8 @@
-import 'package:bookly_app/core/utils/dimensions_of_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../../constents.dart';
-import 'custom_icon_button.dart';
+import '../../../../../../core/utils/app_colors.dart';
+import '../../../../../../core/utils/dimensions_of_screen.dart';
+import '../../../../../../core/widgets/custom_icon_button.dart';
 
 class CustomHomeAppBar extends StatelessWidget {
   const CustomHomeAppBar({
@@ -31,7 +31,7 @@ class CustomHomeAppBar extends StatelessWidget {
           const CustomIconButton(
             icon: Icon(
               Icons.search,
-              color: kWhiteColor,
+              color: AppColors.whiteColor,
             ),
           )
         ],

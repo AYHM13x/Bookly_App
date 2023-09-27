@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Bodys/splash_view_body.dart';
+import 'bodys/splash_view_body.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({super.key});

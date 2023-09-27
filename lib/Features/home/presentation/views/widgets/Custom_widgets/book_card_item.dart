@@ -1,6 +1,6 @@
-import 'package:bookly_app/constents.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../../constents.dart';
 import '../../../../../../core/utils/assets.dart';
 
 class BookCardItemView extends StatelessWidget {

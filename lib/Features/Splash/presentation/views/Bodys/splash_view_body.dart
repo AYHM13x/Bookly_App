@@ -1,9 +1,9 @@
-import 'package:bookly_app/core/utils/app_router.dart';
-import 'package:bookly_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../constents.dart';
+import '../../../../../core/utils/app_router.dart';
+import '../../../../../core/utils/assets.dart';
 import '../widgets/animated_text_in_splash_view_body.dart';
 
 class SplashViewBody extends StatefulWidget {
