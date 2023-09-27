@@ -1,7 +1,7 @@
+import 'package:bookly_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../constents.dart';
 import 'Custom_widgets/book_card_item.dart';
 
 class BookCardsListView extends StatelessWidget {
@@ -26,7 +26,7 @@ class BookCardsListView extends StatelessWidget {
               // Get.to(() => const BookDetailsView(),
               //     transition: Transition.fadeIn,
               //     duration: kNavigationToNextView);
-              GoRouter.of(context).push(kBookDetailsViewPath);
+              GoRouter.of(context).push(AppRouter.kBookDetailsViewPath);
             },
             child: const BookCardItemView(),
           ),

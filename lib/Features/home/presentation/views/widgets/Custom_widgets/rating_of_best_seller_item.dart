@@ -15,6 +15,9 @@ class RatingOfBestSellerItem extends StatelessWidget {
           Icons.star_rounded,
           color: kYellowColor,
         ),
+        const SizedBox(
+          width: 6,
+        ),
         const Text(
           "4.5",
           style: Styles.textStyle16,

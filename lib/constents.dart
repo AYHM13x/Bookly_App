@@ -10,17 +10,12 @@ const kOrangeColor = Color(0xffEF8262);
 //Duration
 const kDelayedDuration = Duration(milliseconds: 3250);
 const kTransitionDuration = Duration(milliseconds: 2000);
-const kNavigationToNextView = Duration(milliseconds: 500);
+const kNavigationToNextView = Duration(milliseconds: 100);
 
 //Font Families
 const kGTSectraFine = "GT Sectra Fine";
 const kMontserrat = "Montserrat";
 const kRoboto = "Roboto";
-
-//Routing Paths
-const kSplashViewPath = "/";
-const kHomeViewPath = "/homeView";
-const kBookDetailsViewPath = "/homeView/BookDetailsView";
 
 const kEuroSympol = "€";
 const kBorderRadiusValue = 15.0;

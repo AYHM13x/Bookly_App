@@ -1,3 +1,4 @@
+import 'package:bookly_app/core/utils/app_router.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -28,7 +29,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     animationController.dispose();
   }
@@ -68,7 +68,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     Future.delayed(kDelayedDuration, () {
       // Get.to(() => const HomeView(),
       //     transition: Transition.fadeIn, duration: kTransitionDuration);
-      GoRouter.of(context).push('/homeView');
+      GoRouter.of(context).push(AppRouter.kHomeViewPath);
     });
   }
 }

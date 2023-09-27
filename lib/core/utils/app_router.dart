@@ -7,6 +7,11 @@ import '../../Features/home/home_view.dart';
 import '../../constents.dart';
 
 abstract class AppRouter {
+  //Paths
+  static String kSplashViewPath = "/";
+  static String kHomeViewPath = "/homeView";
+  static String kBookDetailsViewPath = "/homeView/BookDetailsView";
+
   static final RouterConfig<Object> router = GoRouter(
     routes: [
       GoRoute(
@@ -15,11 +20,41 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: kHomeViewPath,
-        builder: (context, state) => const HomeView(),
+        pageBuilder: (context, state) {
+          return CustomTransitionPage(
+            key: state.pageKey,
+            child: const HomeView(),
+            transitionDuration: kNavigationToNextView,
+            reverseTransitionDuration: kNavigationToNextView,
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: CurveTween(curve: Curves.easeIn).animate(animation),
+                alwaysIncludeSemantics: true,
+                child: child,
+              );
+            },
+          );
+        },
       ),
       GoRoute(
         path: kBookDetailsViewPath,
-        builder: (context, state) => const BookDetailsView(),
+        pageBuilder: (context, state) {
+          return CustomTransitionPage(
+            key: state.pageKey,
+            child: const BookDetailsView(),
+            transitionDuration: kNavigationToNextView,
+            reverseTransitionDuration: kNavigationToNextView,
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: CurveTween(curve: Curves.easeIn).animate(animation),
+                alwaysIncludeSemantics: true,
+                child: child,
+              );
+            },
+          );
+        },
       ),
     ],
   );

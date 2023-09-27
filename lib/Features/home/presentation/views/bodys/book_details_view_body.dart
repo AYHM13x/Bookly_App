@@ -3,11 +3,9 @@ import 'package:bookly_app/constents.dart';
 import 'package:bookly_app/core/utils/dimensions_of_screen.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 import '../widgets/Custom_widgets/book_card_item.dart';
-import '../widgets/Custom_widgets/custom_app_bar.dart';
-import '../widgets/Custom_widgets/custom_app_bar_icon_button.dart';
+import '../widgets/Custom_widgets/custom_book_detail_app_bar.dart';
 import '../widgets/Custom_widgets/pay_and_free_preview_buttons.dart';
 import '../widgets/Custom_widgets/text_of_detail_of_book_view.dart';
 
@@ -25,23 +23,7 @@ class BookDetailsViewBody extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          CustomAppBar(
-            firstWidget: CustomIconButton(
-              icon: const Icon(
-                Icons.close,
-                color: kWhiteColor,
-                size: 40,
-              ),
-              onPressed: () {
-                //Get.back();
-                GoRouter.of(context).pop();
-              },
-            ),
-            secondWidget: CustomIconButton(
-              icon: const Icon(Icons.shopping_cart_outlined),
-              onPressed: () {},
-            ),
-          ),
+          const CustomBookDetailAppBar(),
           SizedBox(
             height: DimensionsOfScreen.dimensionsOfHeight(context, 2),
           ),
@@ -73,10 +55,10 @@ class BookDetailsViewBody extends StatelessWidget {
           SizedBox(
             height: paddingOfHeight5,
           ),
-          SizedBox(
-            height: DimensionsOfScreen.dimensionsOfHeight(context, 20),
-            child: const BookCardsListView(
-              horizontalPaddingBetweenItems: 9,
+          const SizedBox(
+            height: 125,
+            child: BookCardsListView(
+              horizontalPaddingBetweenItems: 10,
             ),
           ),
         ],
