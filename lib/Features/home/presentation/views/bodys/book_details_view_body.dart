@@ -1,5 +1,3 @@
-import 'package:bookly_app/Features/home/presentation/views/widgets/book_cards_list_view.dart';
-
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/app_colors.dart';
@@ -9,6 +7,7 @@ import '../widgets/Custom_widgets/book_card_item.dart';
 import '../widgets/Custom_widgets/custom_book_detail_app_bar.dart';
 import '../widgets/Custom_widgets/pay_and_free_preview_buttons.dart';
 import '../widgets/Custom_widgets/text_of_detail_of_book_view.dart';
+import '../widgets/book_cards_detail_book_list_view.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
@@ -42,12 +41,15 @@ class BookDetailsViewBody extends StatelessWidget {
             height: 37,
           ),
           //Pay and Preview buttons
-          const PayAndFreePreviewButtons(),
+          SizedBox(
+            width: DimensionsOfScreen.dimensionsOfWidth(context, 75),
+            child: const PayAndFreePreviewButtons(),
+          ),
           const SizedBox(
             height: 51,
           ),
 
-          Container(
+          Align(
             alignment: Alignment.centerLeft,
             child: Text(
               "You can also like",
@@ -63,9 +65,7 @@ class BookDetailsViewBody extends StatelessWidget {
           //list of "You can also like"
           const SizedBox(
             height: 112,
-            child: BookCardsListView(
-              horizontalPaddingBetweenItems: 10,
-            ),
+            child: BookCardsDetailBookListView(),
           ),
         ],
       ),

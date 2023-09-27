@@ -1,4 +1,5 @@
 //Duration
+
 const kDelayedDuration = Duration(milliseconds: 3250);
 const kTransitionDuration = Duration(milliseconds: 2000);
 const kNavigationToNextView = Duration(milliseconds: 100);

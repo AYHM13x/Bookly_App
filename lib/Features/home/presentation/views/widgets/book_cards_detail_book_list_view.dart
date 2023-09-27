@@ -4,13 +4,11 @@ import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/app_router.dart';
 import 'Custom_widgets/book_card_item.dart';
 
-class BookCardsListView extends StatelessWidget {
-  const BookCardsListView({
+class BookCardsDetailBookListView extends StatelessWidget {
+  const BookCardsDetailBookListView({
     super.key,
-    required this.horizontalPaddingBetweenItems,
   });
 
-  final double horizontalPaddingBetweenItems;
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -18,8 +16,7 @@ class BookCardsListView extends StatelessWidget {
       itemCount: 20,
       itemBuilder: (context, index) {
         return Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: horizontalPaddingBetweenItems),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
           child: GestureDetector(
             onTap: () {
               debugPrint(index.toString());

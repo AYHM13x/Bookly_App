@@ -5,7 +5,7 @@ import '../../../../../core/utils/dimensions_of_screen.dart';
 import '../../../../../core/utils/styles.dart';
 import '../widgets/Custom_widgets/custom_home_app_bar.dart';
 import '../widgets/best_seller_list_view.dart';
-import '../widgets/book_cards_list_view.dart';
+import '../widgets/book_cards_home_list_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({
@@ -30,9 +30,7 @@ class HomeViewBody extends StatelessWidget {
               ),
               const SizedBox(
                 height: 224,
-                child: BookCardsListView(
-                  horizontalPaddingBetweenItems: 15,
-                ),
+                child: BookCardsHomeListView(),
               ),
               const SizedBox(
                 height: 36,

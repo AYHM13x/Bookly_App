@@ -1,9 +1,9 @@
-import 'package:bookly_app/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../constents.dart';
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/styles.dart';
+import '../../../../../../core/widgets/custom_button.dart';
 
 class PayAndFreePreviewButtons extends StatelessWidget {
   const PayAndFreePreviewButtons({
@@ -15,9 +15,7 @@ class PayAndFreePreviewButtons extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SizedBox(
-          height: height,
-          width: width,
+        Expanded(
           child: CustomButton(
             text: "19.99$kEuroSympol",
             style: Styles.textStyle18.copyWith(
@@ -25,23 +23,31 @@ class PayAndFreePreviewButtons extends StatelessWidget {
               color: AppColors.primaryColor,
             ),
             backgroundColor: AppColors.whiteColor,
-            borderRadiusLeft: const Radius.circular(kBorderRadiusValue),
-            onPressed: () {},
+            borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(kBorderRadiusValue),
+                bottomLeft: Radius.circular(kBorderRadiusValue)),
+            onPressed: () {
+              debugPrint("pay");
+            },
           ),
         ),
-        SizedBox(
-          height: height,
-          width: width,
+        Expanded(
           child: CustomButton(
-              text: "Free preview",
-              style: Styles.textStyle16.copyWith(
-                fontFamily: kRoboto,
-                fontWeight: FontWeight.normal,
-                color: AppColors.whiteColor,
-              ),
-              backgroundColor: AppColors.orangeColor,
-              borderRadiusRight: const Radius.circular(kBorderRadiusValue),
-              onPressed: () {}),
+            text: "Free Preview",
+            style: Styles.textStyle16.copyWith(
+              fontFamily: kRoboto,
+              fontWeight: FontWeight.normal,
+              color: AppColors.whiteColor,
+            ),
+            backgroundColor: AppColors.orangeColor,
+            borderRadius: const BorderRadius.only(
+              topRight: Radius.circular(kBorderRadiusValue),
+              bottomRight: Radius.circular(kBorderRadiusValue),
+            ),
+            onPressed: () {
+              debugPrint("Free preview");
+            },
+          ),
         )
       ],
     );

@@ -1,5 +1,6 @@
-import 'package:bookly_app/constents.dart';
 import 'package:flutter/material.dart';
+
+import '../../constents.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
@@ -7,32 +8,32 @@ class CustomButton extends StatelessWidget {
     required this.text,
     required this.style,
     required this.backgroundColor,
-    this.borderRadiusLeft = Radius.zero,
-    this.borderRadiusRight = Radius.zero,
     this.onPressed,
+    this.borderRadius,
   });
   final String text;
   final TextStyle style;
   final Color backgroundColor;
-  final Radius borderRadiusLeft;
-  final Radius borderRadiusRight;
+  final BorderRadius? borderRadius;
   final void Function()? onPressed;
+  final double height = 48;
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: onPressed,
-      style: TextButton.styleFrom(
-        backgroundColor: backgroundColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.horizontal(
-            left: borderRadiusLeft,
-            right: borderRadiusRight,
+    return SizedBox(
+      height: height,
+      child: TextButton(
+        onPressed: onPressed,
+        style: TextButton.styleFrom(
+          backgroundColor: backgroundColor,
+          shape: RoundedRectangleBorder(
+            borderRadius:
+                borderRadius ?? BorderRadius.circular(kBorderRadiusValue),
           ),
         ),
-      ),
-      child: Text(
-        text,
-        style: style,
+        child: Text(
+          text,
+          style: style,
+        ),
       ),
     );
   }
