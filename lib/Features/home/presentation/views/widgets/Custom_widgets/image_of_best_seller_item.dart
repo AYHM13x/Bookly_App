@@ -11,7 +11,7 @@ class ImageOfBestSellerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 125,
+      height: 105,
       child: AspectRatio(
         aspectRatio: 2 / 3,
         child: Container(

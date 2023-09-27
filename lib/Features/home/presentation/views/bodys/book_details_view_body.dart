@@ -14,33 +14,32 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double paddingOfHeight5 =
-        DimensionsOfScreen.dimensionsOfHeight(context, 5);
+    double width35 = DimensionsOfScreen.dimensionsOfWidth(context, 35);
     return SingleChildScrollView(
-      padding: EdgeInsets.only(
-        bottom: paddingOfHeight5,
+      padding: const EdgeInsets.only(
+        bottom: 40,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           const CustomBookDetailAppBar(),
-          SizedBox(
-            height: DimensionsOfScreen.dimensionsOfHeight(context, 2),
+          const SizedBox(
+            height: 33,
           ),
           SizedBox(
-            width: DimensionsOfScreen.dimensionsOfWidth(context, 35),
+            width: width35,
             child: const BookCardItemView(),
           ),
-          SizedBox(
-            height: paddingOfHeight5,
+          const SizedBox(
+            height: 45,
           ),
           const TextOfDetailOfBookView(),
-          SizedBox(
-            height: paddingOfHeight5,
+          const SizedBox(
+            height: 37,
           ),
           const PayAndFreePreviewButtons(),
-          SizedBox(
-            height: paddingOfHeight5,
+          const SizedBox(
+            height: 51,
           ),
           Container(
             alignment: Alignment.centerLeft,
@@ -52,11 +51,11 @@ class BookDetailsViewBody extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            height: paddingOfHeight5,
+          const SizedBox(
+            height: 16,
           ),
           const SizedBox(
-            height: 125,
+            height: 112,
             child: BookCardsListView(
               horizontalPaddingBetweenItems: 10,
             ),

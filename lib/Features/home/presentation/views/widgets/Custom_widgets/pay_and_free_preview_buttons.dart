@@ -7,7 +7,7 @@ class PayAndFreePreviewButtons extends StatelessWidget {
   const PayAndFreePreviewButtons({
     super.key,
   });
-
+  final double height = 48, width = 150;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -16,8 +16,8 @@ class PayAndFreePreviewButtons extends StatelessWidget {
         GestureDetector(
           onTap: () {},
           child: Container(
-            height: 48,
-            width: 150,
+            height: height,
+            width: width,
             alignment: Alignment.center,
             decoration: const BoxDecoration(
                 color: kWhiteColor,
@@ -36,8 +36,8 @@ class PayAndFreePreviewButtons extends StatelessWidget {
         GestureDetector(
           onTap: () {},
           child: Container(
-            height: 48,
-            width: 150,
+            height: height,
+            width: width,
             alignment: Alignment.center,
             decoration: const BoxDecoration(
                 color: kOrangeColor,

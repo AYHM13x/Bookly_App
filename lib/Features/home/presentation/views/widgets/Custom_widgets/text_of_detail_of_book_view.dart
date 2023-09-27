@@ -16,8 +16,8 @@ class TextOfDetailOfBookView extends StatelessWidget {
           "The Jungle Book",
           style: Styles.textStyle30,
         ),
-        SizedBox(
-          height: DimensionsOfScreen.dimensionsOfHeight(context, 1),
+        const SizedBox(
+          height: 8,
         ),
         Text(
           "Rudyard Kipling",
@@ -26,8 +26,8 @@ class TextOfDetailOfBookView extends StatelessWidget {
             color: kGreyColor,
           ),
         ),
-        SizedBox(
-          height: DimensionsOfScreen.dimensionsOfHeight(context, 2),
+        const SizedBox(
+          height: 17,
         ),
         const RatingOfBestSellerItem(),
       ],
