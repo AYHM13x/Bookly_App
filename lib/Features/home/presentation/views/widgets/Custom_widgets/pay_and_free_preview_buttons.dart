@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../../../constents.dart';
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/styles.dart';
-import '../../../../../../core/widgets/custom_button.dart';
+import '../../../../../../core/widgets/custom_widgets/custom_button.dart';
 
 class PayAndFreePreviewButtons extends StatelessWidget {
   const PayAndFreePreviewButtons({

@@ -1,9 +1,8 @@
-import 'package:bookly_app/core/utils/dimensions_of_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/app_router.dart';
-import 'custom_widgets/search_book_item_view.dart';
+import 'book_item_view.dart';
 
 class SearchBookListView extends StatelessWidget {
   const SearchBookListView({
@@ -27,7 +26,7 @@ class SearchBookListView extends StatelessWidget {
               //     duration: kNavigationToNextView);
               GoRouter.of(context).push(AppRouter.bookDetailsViewPath);
             },
-            child: const SearchBookItemView(),
+            child: const BookItemView(),
           ),
         );
       },

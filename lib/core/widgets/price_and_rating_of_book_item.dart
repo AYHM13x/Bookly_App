@@ -4,8 +4,8 @@ import '../../../../../../constents.dart';
 import '../../../../../../core/utils/styles.dart';
 import 'rating_of_book_item.dart';
 
-class PriceAndRateOfSearchBookItem extends StatelessWidget {
-  const PriceAndRateOfSearchBookItem({super.key});
+class PriceAndRateOfBookItem extends StatelessWidget {
+  const PriceAndRateOfBookItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class PriceAndRateOfSearchBookItem extends StatelessWidget {
         SizedBox(
           width: 6,
         ),
-        RatingOfSearchBookItem(),
+        RatingOfBookItem(),
       ],
     );
   }

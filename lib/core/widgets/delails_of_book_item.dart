@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../../../../../constents.dart';
 import '../../../../../../core/utils/styles.dart';
-import 'price_and_rating_of_best_seller_item.dart';
+import 'price_and_rating_of_book_item.dart';
 
-class DetailsOfBestSellerItem extends StatelessWidget {
-  const DetailsOfBestSellerItem({
+class DetailsBookItem extends StatelessWidget {
+  const DetailsBookItem({
     super.key,
   });
 
@@ -40,7 +40,7 @@ class DetailsOfBestSellerItem extends StatelessWidget {
           const SizedBox(
             height: 8,
           ),
-          const PriceAndRateOfBestSellerItem(),
+          const PriceAndRateOfBookItem(),
         ],
       ),
     );

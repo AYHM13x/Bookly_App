@@ -1,10 +1,10 @@
-import 'package:bookly_app/constents.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../../constents.dart';
 import '../../../../../../core/utils/assets.dart';
 
-class ImageOfSearchBookItem extends StatelessWidget {
-  const ImageOfSearchBookItem({
+class ImageBookItem extends StatelessWidget {
+  const ImageBookItem({
     super.key,
   });
 

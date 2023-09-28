@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../../core/utils/app_colors.dart';
-//import '../../../../../../core/utils/dimensions_of_screen.dart';
-import '../../../../../../core/widgets/custom_icon_button.dart';
+import '../../../../../../core/widgets/custom_widgets/custom_icon_button.dart';
 
 class CustomBookDetailAppBar extends StatelessWidget {
   const CustomBookDetailAppBar({

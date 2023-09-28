@@ -1,5 +1,6 @@
 // ignore_for_file: must_be_immutable
 
+import 'package:bookly_app/constents.dart';
 import 'package:bookly_app/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -51,14 +52,14 @@ class CustomTextFormField extends StatelessWidget {
         //border of text field
         border: rounderBorder(color: AppColors.whiteColor),
         enabledBorder: rounderBorder(color: AppColors.whiteColor),
-        focusedBorder: rounderBorder(color: AppColors.orangeColor),
+        focusedBorder: rounderBorder(color: AppColors.lightBlueColor),
       ),
     );
   }
 
   OutlineInputBorder rounderBorder({color}) {
     return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(20.0),
+      borderRadius: BorderRadius.circular(kBorderRadiusValue),
       borderSide: BorderSide(color: color),
     );
   }

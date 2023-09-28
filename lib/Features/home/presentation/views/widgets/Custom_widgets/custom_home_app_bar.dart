@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/dimensions_of_screen.dart';
-import '../../../../../../core/widgets/custom_icon_button.dart';
+import '../../../../../../core/widgets/custom_widgets/custom_icon_button.dart';
 
 class CustomHomeAppBar extends StatelessWidget {
-   const CustomHomeAppBar({
+  const CustomHomeAppBar({
     super.key,
     required this.image,
     this.onPressedAppBar,
@@ -30,7 +30,7 @@ class CustomHomeAppBar extends StatelessWidget {
             width: 100,
           ),
           //icon in app bar
-           CustomIconButton(
+          CustomIconButton(
             icon: const Icon(
               Icons.search,
               color: AppColors.whiteColor,

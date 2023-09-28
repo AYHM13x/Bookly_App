@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/dimensions_of_screen.dart';
-import 'delails_of_best_seller_item.dart';
-import 'image_of_best_seller_item.dart';
+import 'delails_of_book_item.dart';
+import 'image_of_book_item.dart';
 
-class BestSellerItemView extends StatelessWidget {
-  const BestSellerItemView({super.key});
+class BookItemView extends StatelessWidget {
+  const BookItemView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +14,11 @@ class BestSellerItemView extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
-          const ImageOfBestSellerItem(),
+          const ImageBookItem(),
           SizedBox(
             width: DimensionsOfScreen.dimensionsOfWidth(context, 5),
           ),
-          const DetailsOfBestSellerItem(),
+          const DetailsBookItem(),
         ],
       ),
     );
