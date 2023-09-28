@@ -16,7 +16,7 @@ class BookCardsHomeListView extends StatelessWidget {
       itemCount: 20,
       itemBuilder: (context, index) {
         return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 8),
           child: GestureDetector(
             onTap: () {
               debugPrint(index.toString());

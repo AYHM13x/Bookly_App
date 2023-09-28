@@ -14,7 +14,7 @@ class BookDetailsView extends StatelessWidget {
         left: DimensionsOfScreen.dimensionsOfWidth(context, 4),
       ),
       child: const Scaffold(
-        body: BookDetailsViewBody(),
+        body: BookDetailsViewBodyOldVersion(),
       ),
     );
   }

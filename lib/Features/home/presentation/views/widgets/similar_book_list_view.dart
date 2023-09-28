@@ -4,8 +4,8 @@ import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/app_router.dart';
 import 'Custom_widgets/book_card_item.dart';
 
-class BookCardsDetailBookListView extends StatelessWidget {
-  const BookCardsDetailBookListView({
+class SimilarBookListView extends StatelessWidget {
+  const SimilarBookListView({
     super.key,
   });
 
@@ -16,7 +16,7 @@ class BookCardsDetailBookListView extends StatelessWidget {
       itemCount: 20,
       itemBuilder: (context, index) {
         return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 5),
           child: GestureDetector(
             onTap: () {
               debugPrint(index.toString());

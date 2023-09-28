@@ -12,11 +12,10 @@ class CustomBookDetailAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double height2 = DimensionsOfScreen.dimensionsOfHeight(context, 2);
+    double height4 = DimensionsOfScreen.dimensionsOfHeight(context, 4);
     return Padding(
       padding: EdgeInsets.only(
-        bottom: height2,
-        top: height2 * 2,
+        top: height4,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
