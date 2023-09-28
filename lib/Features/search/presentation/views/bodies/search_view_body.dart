@@ -15,12 +15,12 @@ class SearchViewBody extends StatelessWidget {
           hintText: "Search",
         ),
         SizedBox(
-          height: DimensionsOfScreen.dimensionsOfHeight(context, 2),
+          height: DimensionsOfScreen.dimensionsOfHeight(context, 3),
         ),
-        SizedBox(
-          height: DimensionsOfScreen.dimensionsOfHeight(context, 81),
-          child: const SingleChildScrollView(
-            child: SearchBookListView(),
+        SingleChildScrollView(
+          child: SizedBox(
+            height: DimensionsOfScreen.dimensionsOfHeight(context, 78),
+            child: const SearchBookListView(),
           ),
         )
       ],

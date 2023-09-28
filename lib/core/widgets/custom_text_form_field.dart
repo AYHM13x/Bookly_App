@@ -49,9 +49,9 @@ class CustomTextFormField extends StatelessWidget {
           color: AppColors.greyColor,
         ),
         //border of text field
-        border: rounderBorder(color: Colors.white),
-        enabledBorder: rounderBorder(color: Colors.white),
-        focusedBorder: rounderBorder(color: AppColors.primaryColor),
+        border: rounderBorder(color: AppColors.whiteColor),
+        enabledBorder: rounderBorder(color: AppColors.whiteColor),
+        focusedBorder: rounderBorder(color: AppColors.orangeColor),
       ),
     );
   }

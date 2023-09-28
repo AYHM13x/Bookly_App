@@ -1,3 +1,4 @@
+import 'package:bookly_app/core/utils/dimensions_of_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -13,7 +14,6 @@ class SearchBookListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
       padding: EdgeInsets.zero,
       itemCount: 20,
       itemBuilder: (context, index) {
