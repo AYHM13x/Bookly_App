@@ -5,12 +5,14 @@ import '../../../../../../core/utils/dimensions_of_screen.dart';
 import '../../../../../../core/widgets/custom_icon_button.dart';
 
 class CustomHomeAppBar extends StatelessWidget {
-  const CustomHomeAppBar({
+   const CustomHomeAppBar({
     super.key,
     required this.image,
+    this.onPressedAppBar,
   });
 
   final String image;
+  final Function()? onPressedAppBar;
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +30,12 @@ class CustomHomeAppBar extends StatelessWidget {
             width: 100,
           ),
           //icon in app bar
-          const CustomIconButton(
-            icon: Icon(
+           CustomIconButton(
+            icon: const Icon(
               Icons.search,
               color: AppColors.whiteColor,
             ),
+            onPressed: onPressedAppBar,
           )
         ],
       ),

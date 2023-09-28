@@ -19,15 +19,12 @@ class BookDetailsViewBodyOldVersion extends StatelessWidget {
         children: [
           //AppBar
           const CustomBookDetailAppBar(),
-          const SizedBox(
-            height: 33,
-          ),
           //Book Card
-          const DetalBookSection(),
+          const DetailBookSection(),
           SizedBox(
             height: DimensionsOfScreen.dimensionsOfHeight(context, 6.85),
           ),
-          const DetalBookSection()
+          const DetailBookSection()
         ],
       ),
     );
@@ -48,11 +45,8 @@ class BookDetailsViewBodyNewVersion extends StatelessWidget {
             children: [
               //AppBar
               CustomBookDetailAppBar(),
-              SizedBox(
-                height: 33,
-              ),
               //Book Card
-              DetalBookSection(),
+              DetailBookSection(),
               // const Expanded(
               //   child: SizedBox(),
               // ),
@@ -63,7 +57,7 @@ class BookDetailsViewBodyNewVersion extends StatelessWidget {
           hasScrollBody: false,
         ),
         SliverToBoxAdapter(
-          child: SimilarBookSection(),
+          child: SimilarBooksSection(),
         )
       ],
     );
@@ -76,26 +70,19 @@ class BookDetailsViewBodySamyVersion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomScrollView(
-      shrinkWrap: true,
       slivers: [
         SliverFillRemaining(
           hasScrollBody: false,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               //AppBar
               CustomBookDetailAppBar(),
-              SizedBox(
-                height: 33,
-              ),
-              //Book Card
-              DetalBookSection(),
+              //Book Card Section
+              DetailBookSection(),
               Expanded(
-                child: SizedBox(
-                  height: 50,
-                ),
+                child: SizedBox(),
               ),
-              SimilarBookSection(),
+              SimilarBooksSection(),
             ],
           ),
         ),

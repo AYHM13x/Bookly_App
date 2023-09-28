@@ -9,7 +9,7 @@ class PayAndFreePreviewButtons extends StatelessWidget {
   const PayAndFreePreviewButtons({
     super.key,
   });
-  final double height = 48, width = 150;
+  final double height = 48;
   @override
   Widget build(BuildContext context) {
     return Row(

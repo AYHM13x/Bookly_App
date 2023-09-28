@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/app_router.dart';
-import 'Custom_widgets/best_seller_item.dart';
+import 'custom_widgets/search_book_item_view.dart';
 
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({
+class SearchBookListView extends StatelessWidget {
+  const SearchBookListView({
     super.key,
   });
 
@@ -27,7 +27,7 @@ class BestSellerListView extends StatelessWidget {
               //     duration: kNavigationToNextView);
               GoRouter.of(context).push(AppRouter.bookDetailsViewPath);
             },
-            child: const BestSellerItemView(),
+            child: const SearchBookItemView(),
           ),
         );
       },

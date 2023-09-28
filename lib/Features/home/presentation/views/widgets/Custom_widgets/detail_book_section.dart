@@ -5,8 +5,8 @@ import 'book_card_item.dart';
 import 'pay_and_free_preview_buttons.dart';
 import 'text_of_detail_of_book_view.dart';
 
-class DetalBookSection extends StatelessWidget {
-  const DetalBookSection({super.key});
+class DetailBookSection extends StatelessWidget {
+  const DetailBookSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +14,9 @@ class DetalBookSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        const SizedBox(
+          height: 33,
+        ),
         SizedBox(
           width: width40,
           child: const BookCardItemView(),

@@ -23,7 +23,7 @@ class SimilarBookListView extends StatelessWidget {
               // Get.to(() => const BookDetailsView(),
               //     transition: Transition.fadeIn,
               //     duration: kNavigationToNextView);
-              GoRouter.of(context).push(AppRouter.kBookDetailsViewPath);
+              GoRouter.of(context).push(AppRouter.bookDetailsViewPath);
             },
             child: const BookCardItemView(),
           ),
