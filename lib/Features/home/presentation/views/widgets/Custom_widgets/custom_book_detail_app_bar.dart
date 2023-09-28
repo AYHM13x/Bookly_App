@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../../core/utils/app_colors.dart';
-import '../../../../../../core/utils/dimensions_of_screen.dart';
+//import '../../../../../../core/utils/dimensions_of_screen.dart';
 import '../../../../../../core/widgets/custom_icon_button.dart';
 
 class CustomBookDetailAppBar extends StatelessWidget {
@@ -12,30 +12,25 @@ class CustomBookDetailAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double height4 = DimensionsOfScreen.dimensionsOfHeight(context, 4);
-    return Padding(
-      padding: EdgeInsets.only(
-        top: height4,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          CustomIconButton(
-            icon: const Icon(
-              Icons.close,
-              color: AppColors.whiteColor,
-            ),
-            onPressed: () {
-              //Get.back();
-              GoRouter.of(context).pop();
-            },
+    //double height4 = DimensionsOfScreen.dimensionsOfHeight(context, 4);
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        CustomIconButton(
+          icon: const Icon(
+            Icons.close,
+            color: AppColors.whiteColor,
           ),
-          CustomIconButton(
-            icon: const Icon(Icons.shopping_cart_outlined),
-            onPressed: () {},
-          ),
-        ],
-      ),
+          onPressed: () {
+            //Get.back();
+            GoRouter.of(context).pop();
+          },
+        ),
+        CustomIconButton(
+          icon: const Icon(Icons.shopping_cart_outlined),
+          onPressed: () {},
+        ),
+      ],
     );
   }
 }
