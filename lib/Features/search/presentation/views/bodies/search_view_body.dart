@@ -1,27 +1,33 @@
 import 'package:bookly_app/core/utils/dimensions_of_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/widgets/custom_widgets/custom_text_form_field.dart';
-import '../../../../../core/widgets/search_book_list_view.dart';
+import '../../../../../core/utils/styles.dart';
+import '../../../../../core/widgets/custom_widgets/custom_search_text_field.dart';
+import '../widgets/search_books_list_view.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const CustomTextFormField(
+        CustomSearchTextField(
           hintText: "Search",
         ),
         SizedBox(
-          height: DimensionsOfScreen.dimensionsOfHeight(context, 3),
+          height: 16,
         ),
-        SingleChildScrollView(
-          child: SizedBox(
-            height: DimensionsOfScreen.dimensionsOfHeight(context, 80),
-            child: const SearchBookListView(),
-          ),
+        Text(
+          "Search Result:",
+          style: Styles.textStyle18,
+        ),
+        SizedBox(
+          height: 16,
+        ),
+        Expanded(
+          child: BookListView(),
         )
       ],
     );

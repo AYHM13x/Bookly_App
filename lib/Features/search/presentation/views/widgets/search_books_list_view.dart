@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../core/utils/app_router.dart';
-import 'book_item_view.dart';
+import '../../../../../../../../core/utils/app_router.dart';
+import '../../../../../core/widgets/book_item_view.dart';
 
-class SearchBookListView extends StatelessWidget {
-  const SearchBookListView({
+class BookListView extends StatelessWidget {
+  const BookListView({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      shrinkWrap: true,
       padding: EdgeInsets.zero,
       itemCount: 20,
       itemBuilder: (context, index) {

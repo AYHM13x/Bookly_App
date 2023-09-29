@@ -4,35 +4,22 @@ import 'package:bookly_app/constents.dart';
 import 'package:bookly_app/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
-class CustomTextFormField extends StatelessWidget {
-  const CustomTextFormField({
+class CustomSearchTextField extends StatelessWidget {
+  const CustomSearchTextField({
     super.key,
     required this.hintText,
     this.maxLines = 1,
-    this.onSaved,
-    this.oldValue,
     this.onChange,
   });
 
   final String hintText;
   final int maxLines;
   final void Function(String)? onChange;
-  final void Function(String?)? onSaved;
-  final String? oldValue;
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      initialValue: oldValue, //if i want to edit note show current value
-      onSaved: onSaved, //if i want to add note i want to save value
+    return TextField(
       onChanged: onChange, //if i want to edit note
-      validator: (data) {
-        if ((data?.isEmpty ?? true)) {
-          return "field is required";
-        } else {
-          return null;
-        }
-      },
       cursorColor: AppColors.whiteColor, //color of cursor
       textAlign: TextAlign.left, //place of text
       maxLines: maxLines, //max of empty lines
@@ -40,6 +27,17 @@ class CustomTextFormField extends StatelessWidget {
         color: AppColors.whiteColor, // color of typing text
       ),
       decoration: InputDecoration(
+        suffixIcon: Padding(
+          padding: const EdgeInsets.only(right: 8),
+          child: Opacity(
+            opacity: 0.8,
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.search),
+            ),
+          ),
+        ),
+        suffixIconColor: AppColors.whiteColor,
         //padding of content
         contentPadding: const EdgeInsets.symmetric(
           vertical: 30.0,
@@ -50,9 +48,11 @@ class CustomTextFormField extends StatelessWidget {
           color: AppColors.greyColor,
         ),
         //border of text field
-        border: rounderBorder(color: AppColors.whiteColor),
-        enabledBorder: rounderBorder(color: AppColors.whiteColor),
-        focusedBorder: rounderBorder(color: AppColors.lightBlueColor),
+        border: rounderBorder(color: AppColors.whiteColor.withOpacity(0.8)),
+        enabledBorder:
+            rounderBorder(color: AppColors.whiteColor.withOpacity(0.8)),
+        focusedBorder:
+            rounderBorder(color: AppColors.orangeColor.withOpacity(0.7)),
       ),
     );
   }
