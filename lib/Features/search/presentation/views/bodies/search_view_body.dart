@@ -1,4 +1,3 @@
-import 'package:bookly_app/core/utils/dimensions_of_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';

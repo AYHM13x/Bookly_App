@@ -8,12 +8,11 @@ class CustomSearchTextField extends StatelessWidget {
   const CustomSearchTextField({
     super.key,
     required this.hintText,
-    this.maxLines = 1,
     this.onChange,
   });
 
   final String hintText;
-  final int maxLines;
+
   final void Function(String)? onChange;
 
   @override
@@ -22,7 +21,6 @@ class CustomSearchTextField extends StatelessWidget {
       onChanged: onChange, //if i want to edit note
       cursorColor: AppColors.whiteColor, //color of cursor
       textAlign: TextAlign.left, //place of text
-      maxLines: maxLines, //max of empty lines
       style: const TextStyle(
         color: AppColors.whiteColor, // color of typing text
       ),
@@ -57,10 +55,10 @@ class CustomSearchTextField extends StatelessWidget {
     );
   }
 
-  OutlineInputBorder rounderBorder({color}) {
+  OutlineInputBorder rounderBorder({Color? color}) {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(kBorderRadiusValue),
-      borderSide: BorderSide(color: color),
+      borderSide: BorderSide(color: color!),
     );
   }
 }
