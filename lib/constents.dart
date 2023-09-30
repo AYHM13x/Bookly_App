@@ -9,5 +9,8 @@ const kGTSectraFine = "GT Sectra Fine";
 const kMontserrat = "Montserrat";
 const kRoboto = "Roboto";
 
+//base url
+const baseUrl = "https://www.googleapis.com/books/v1/volumes";
+
 const kEuroSympol = "€";
 const kBorderRadiusValue = 15.0;
