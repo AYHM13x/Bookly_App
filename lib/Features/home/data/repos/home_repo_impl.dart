@@ -35,7 +35,7 @@ class HomeRepoImpl implements HomeRepo {
   }
 
   @override
-  Future<Either<Failure, List<BookModel>>> fetchCardBooks() async {
+  Future<Either<Failure, List<BookModel>>> fetchAllBooks() async {
     try {
       Map<String, dynamic> data =
           await apiService.get(endPoint: _secondEndPoint);
