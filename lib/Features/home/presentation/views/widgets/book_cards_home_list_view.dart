@@ -24,6 +24,7 @@ class BookCardsHomeListView extends StatelessWidget {
           if (state is AllBooksSuccess) {
             debugPrint(state.books.length.toString());
             return ListView.builder(
+              physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               itemCount: state.books.length,
               itemBuilder: (context, index) {
@@ -34,9 +35,9 @@ class BookCardsHomeListView extends StatelessWidget {
                       GoRouter.of(context).push(AppRouter.bookDetailsViewPath);
                     },
                     child: BookCardItemView(
-                      imageUrl: state
-                              .books[index].volumeInfo!.imageLinks!.thumbnail ??
-                          "",
+                      imageUrl:
+                          state.books[index].volumeInfo.imageLinks!.thumbnail ??
+                              "",
                     ),
                   ),
                 );

@@ -38,16 +38,15 @@ class HomeRepoImpl implements HomeRepo {
 
   @override
   Future<Either<Failure, List<BookModel>>> fetchAllBooks() async {
-    try {
-      Map<String, dynamic> data = await apiService.get(endPoint: _allFreeBooks);
-      List<BookModel> books = [];
-      //debugPrint(data["items"].runtimeType.toString());
-      for (var item in data["items"]) {
-        books.add(BookModel.fromJson(item));
-      }
+    Map<String, dynamic> data = await apiService.get(endPoint: _allFreeBooks);
+    List<BookModel> books = [];
+    //debugPrint(data["items"].runtimeType.toString());
+    for (var item in data["items"]) {
+      books.add(BookModel.fromJson(item));
+    }
 
-      return right(books);
-    } catch (e) {
+    return right(books);
+    try {} catch (e) {
       if (e is DioException) {
         return left(
           ServerFailure.fromDioException(e),
