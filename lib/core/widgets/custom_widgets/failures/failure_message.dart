@@ -14,6 +14,7 @@ class FailureMessage extends StatelessWidget {
     return Center(
       child: Text(
         errMessage,
+        textAlign: TextAlign.center,
         style: Styles.textStyle18.copyWith(
           color: AppColors.redColor,
         ),

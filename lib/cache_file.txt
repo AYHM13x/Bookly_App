@@ -223,3 +223,19 @@ class BookDetailsViewBody extends StatelessWidget {
     );
   }
 }
+
+
+
+Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Icon(
+                  Icons.error,
+                  color: AppColors.redColor,
+                  size: 64,
+                ),
+                FailureMessage(
+                  errMessage: "Error 404 Image not Found",
+                ),
+              ],
+            );

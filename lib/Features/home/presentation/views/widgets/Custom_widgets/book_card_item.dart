@@ -1,6 +1,7 @@
 //import 'package:cached_network_image/cached_network_image.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/Custom_widgets/custom_circular_indicator.dart';
 import 'package:bookly_app/core/utils/app_colors.dart';
+import 'package:bookly_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../constents.dart';
@@ -32,18 +33,9 @@ class BookCardItemView extends StatelessWidget {
             );
           },
           errorBuilder: (context, error, stackTrace) {
-            return const Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Icon(
-                  Icons.error,
-                  color: AppColors.redColor,
-                  size: 64,
-                ),
-                FailureMessage(
-                  errMessage: "image unloaded",
-                ),
-              ],
+            return Image.asset(
+              AssetsData.errorImage,
+              fit: BoxFit.fill,
             );
           },
         ),

@@ -36,7 +36,7 @@ class BookCardsHomeListView extends StatelessWidget {
                     },
                     child: BookCardItemView(
                       imageUrl:
-                          state.books[index].volumeInfo.imageLinks!.thumbnail ??
+                          state.books[index].volumeInfo.imageLinks?.thumbnail ??
                               "",
                     ),
                   ),
