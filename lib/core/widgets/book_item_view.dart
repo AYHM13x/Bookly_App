@@ -1,3 +1,4 @@
+import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/dimensions_of_screen.dart';
@@ -5,8 +6,9 @@ import 'delails_of_book_item.dart';
 import 'image_of_book_item.dart';
 
 class BookItemView extends StatelessWidget {
-  const BookItemView({super.key});
+  const BookItemView({super.key, required this.book});
 
+  final BookModel book;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -14,11 +16,15 @@ class BookItemView extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
-          const ImageBookItem(),
+          ImageBookItem(
+            imageUrl: book.volumeInfo.imageLinks?.thumbnail ?? "",
+          ),
           SizedBox(
             width: DimensionsOfScreen.dimensionsOfWidth(context, 5),
           ),
-          const DetailsBookItem(),
+          DetailsBookItem(
+            book: book,
+          ),
         ],
       ),
     );

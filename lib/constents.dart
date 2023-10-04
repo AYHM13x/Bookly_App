@@ -11,7 +11,7 @@ const kRoboto = "Roboto";
 
 //sreach subjects
 const kAllFreeBooks = "secret";
-const kAllNewestFreeBooks = "Love";
+const kAllNewestFreeBooks = "people";
 
 //error image
 const kErrorImage =

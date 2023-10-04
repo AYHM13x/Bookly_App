@@ -1,3 +1,4 @@
+import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../constents.dart';
@@ -7,7 +8,10 @@ import 'price_and_rating_of_book_item.dart';
 class DetailsBookItem extends StatelessWidget {
   const DetailsBookItem({
     super.key,
+    required this.book,
   });
+
+  final BookModel book;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +20,7 @@ class DetailsBookItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Harry Potter and the Goblet of Fire",
+            book.volumeInfo.title!,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: Styles.textStyle20.copyWith(
@@ -30,7 +34,9 @@ class DetailsBookItem extends StatelessWidget {
           Opacity(
             opacity: .7,
             child: Text(
-              "J.K. Rowling",
+              book.volumeInfo.authors != null
+                  ? book.volumeInfo.authors![0]
+                  : "there are no authors Avalible",
               style: Styles.textStyle14.copyWith(
                 fontWeight: FontWeight.w500,
                 fontStyle: FontStyle.italic,
@@ -40,7 +46,9 @@ class DetailsBookItem extends StatelessWidget {
           const SizedBox(
             height: 8,
           ),
-          const PriceAndRateOfBookItem(),
+          PriceAndRateOfBookItem(
+            book: book,
+          ),
         ],
       ),
     );

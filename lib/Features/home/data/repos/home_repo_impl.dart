@@ -12,9 +12,9 @@ class HomeRepoImpl implements HomeRepo {
 
   HomeRepoImpl(this.apiService);
   final String _newestFreeBooks =
-      "volumes?Filtering=free-ebooks&Sorting=newest&q=subject:$kAllNewestFreeBooks";
+      "volumes?Filtering=free-ebooks&Sorting=newest&maxResults=40&q=subject:$kAllNewestFreeBooks";
   final String _allFreeBooks =
-      "volumes?Filtering=free-ebooks&q=subject:$kAllFreeBooks";
+      "volumes?Filtering=free-ebooks&maxResults=40&q=subject:$kAllFreeBooks";
 
   @override
   Future<Either<Failure, List<BookModel>>> fetchNewestBooks() async {
