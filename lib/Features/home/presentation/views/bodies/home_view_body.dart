@@ -33,10 +33,7 @@ class HomeViewBody extends StatelessWidget {
                   },
                 ),
               ),
-              const SizedBox(
-                height: 224,
-                child: BookCardsHomeListView(),
-              ),
+              const BookCardsHomeListView(),
               const SizedBox(
                 height: 36,
               ),

@@ -27,7 +27,7 @@ class PayAndFreePreviewButtons extends StatelessWidget {
                 topLeft: Radius.circular(kBorderRadiusValue),
                 bottomLeft: Radius.circular(kBorderRadiusValue)),
             onPressed: () {
-              debugPrint("pay");
+              //debugPrint("pay");
             },
           ),
         ),
@@ -45,7 +45,7 @@ class PayAndFreePreviewButtons extends StatelessWidget {
               bottomRight: Radius.circular(kBorderRadiusValue),
             ),
             onPressed: () {
-              debugPrint("Free preview");
+              //debugPrint("Free preview");
             },
           ),
         )

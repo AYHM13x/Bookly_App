@@ -9,5 +9,9 @@ const kGTSectraFine = "GT Sectra Fine";
 const kMontserrat = "Montserrat";
 const kRoboto = "Roboto";
 
+//sreach subjects
+const kAllFreeBooks = "Flutter";
+const kAllNewestFreeBooks = "Love";
+
 const kEuroSympol = "€";
 const kBorderRadiusValue = 15.0;
