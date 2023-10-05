@@ -22,10 +22,5 @@
             "type": "dart",
             "flutterMode": "release"
         },
-        {
-            "name": "Flutter (SM J530F)",
-            "request": "launch",
-            "type": "dart",
-        }
     ]
 }

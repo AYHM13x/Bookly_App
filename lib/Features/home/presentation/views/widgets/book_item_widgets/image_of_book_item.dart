@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../../constents.dart';
 import '../../../../../../core/utils/assets.dart';
-import '../../Features/home/presentation/views/widgets/Custom_widgets/custom_circular_indicator.dart';
+import '../Custom_widgets/custom_circular_indicator.dart';
 
 class ImageBookItem extends StatelessWidget {
   const ImageBookItem({

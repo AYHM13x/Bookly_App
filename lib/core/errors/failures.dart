@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 
 abstract class Failure {
   final String errMessage;
@@ -28,9 +29,6 @@ class ServerFailure extends Failure {
         return ServerFailure('Request to ApiServer was canceled');
 
       case DioExceptionType.unknown:
-        if (dioException.message!.contains('SocketException')) {
-          return ServerFailure('No Internet Connection');
-        }
         return ServerFailure('Unexpected Error, Please try again!');
       default:
         return ServerFailure('Opps There was an Error, Please try again!');
@@ -39,8 +37,7 @@ class ServerFailure extends Failure {
 
   factory ServerFailure.fromResponse(int? statusCode, dynamic response) {
     if (statusCode == 400 || statusCode == 401 || statusCode == 403) {
-      //debugPrint(response['error']['message']);
-      return ServerFailure(response['error']['message']);
+      return ServerFailure("!!TURN VPN ON!!");
     } else if (statusCode == 404) {
       return ServerFailure('Page not found, Please try later!');
     } else if (statusCode == 500) {

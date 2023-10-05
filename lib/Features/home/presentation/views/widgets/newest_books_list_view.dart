@@ -7,7 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/app_router.dart';
-import '../../../../../core/widgets/book_item_view.dart';
+import 'book_item_widgets/book_item_view.dart';
 
 class NewestBooksListView extends StatelessWidget {
   const NewestBooksListView({

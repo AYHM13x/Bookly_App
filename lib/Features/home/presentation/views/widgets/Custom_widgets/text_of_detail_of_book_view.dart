@@ -1,7 +1,9 @@
+import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
+import 'package:bookly_app/Features/home/data/models/book_model/volume_info.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/styles.dart';
-import 'rating_of_book_item.dart';
+import '../book_item_widgets/rating_of_book_item.dart';
 
 class TextOfDetailOfBookView extends StatelessWidget {
   const TextOfDetailOfBookView({super.key});
@@ -30,7 +32,9 @@ class TextOfDetailOfBookView extends StatelessWidget {
         const SizedBox(
           height: 17,
         ),
-        const RatingOfBookItem(),
+        const RatingOfBookItem(
+          book: BookModel(volumeInfo: VolumeInfo()),
+        ),
       ],
     );
   }
