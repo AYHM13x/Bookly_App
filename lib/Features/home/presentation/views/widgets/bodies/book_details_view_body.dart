@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/dimensions_of_screen.dart';
-import '../widgets/Custom_widgets/custom_book_detail_app_bar.dart';
-import '../widgets/Custom_widgets/detail_book_section.dart';
-import '../widgets/Custom_widgets/similar_book_section.dart';
+import '../../../../../../core/utils/dimensions_of_screen.dart';
+import '../Custom_widgets/custom_book_detail_app_bar.dart';
+import '../book_item_widgets/23_detail_book_section_in_detail_book_view.dart';
+import '../book_item_widgets/24_similar_book_section.dart';
 
 class BookDetailsViewBodyOldVersion extends StatelessWidget {
   const BookDetailsViewBodyOldVersion({super.key});
@@ -20,11 +20,11 @@ class BookDetailsViewBodyOldVersion extends StatelessWidget {
           //AppBar
           const CustomBookDetailAppBar(),
           //Book Card
-          const DetailBookSection(),
+          const DetailBookSectionInDetailBookView(),
           SizedBox(
             height: DimensionsOfScreen.dimensionsOfHeight(context, 6.85),
           ),
-          const DetailBookSection()
+          const SimilarBooksSection()
         ],
       ),
     );
@@ -46,7 +46,7 @@ class BookDetailsViewBodyNewVersion extends StatelessWidget {
               //AppBar
               CustomBookDetailAppBar(),
               //Book Card
-              DetailBookSection(),
+              DetailBookSectionInDetailBookView(),
               // const Expanded(
               //   child: SizedBox(),
               // ),
@@ -78,7 +78,7 @@ class BookDetailsViewBodySamyVersion extends StatelessWidget {
               //AppBar
               CustomBookDetailAppBar(),
               //Book Card Section
-              DetailBookSection(),
+              DetailBookSectionInDetailBookView(),
               Expanded(
                 child: SizedBox(),
               ),

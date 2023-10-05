@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/app_router.dart';
-import 'Custom_widgets/book_card_item.dart';
+import 'book_item_widgets/10_book_card_item.dart';
 
 class SimilarBookListView extends StatelessWidget {
   const SimilarBookListView({

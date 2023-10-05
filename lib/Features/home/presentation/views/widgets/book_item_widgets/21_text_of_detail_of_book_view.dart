@@ -3,7 +3,7 @@ import 'package:bookly_app/Features/home/data/models/book_model/volume_info.dart
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/styles.dart';
-import '../book_item_widgets/rating_of_book_item.dart';
+import '15_rating_of_book_item.dart';
 
 class TextOfDetailOfBookView extends StatelessWidget {
   const TextOfDetailOfBookView({super.key});

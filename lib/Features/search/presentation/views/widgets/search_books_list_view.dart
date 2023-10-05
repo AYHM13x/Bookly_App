@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../../../../core/utils/app_router.dart';
-import '../../../../home/presentation/views/widgets/book_item_widgets/book_item_view.dart';
+import '../../../../home/presentation/views/widgets/book_item_widgets/11_book_item_view.dart';
 
 class BookListView extends StatelessWidget {
   const BookListView({

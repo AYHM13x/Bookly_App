@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../utils/app_colors.dart';
 import '../../../utils/styles.dart';
 
-class FailureMessage extends StatelessWidget {
-  const FailureMessage({
+class FailureMessageView extends StatelessWidget {
+  const FailureMessageView({
     super.key,
     required this.errMessage,
   });
@@ -15,7 +15,7 @@ class FailureMessage extends StatelessWidget {
       child: Text(
         errMessage,
         textAlign: TextAlign.center,
-        style: Styles.textStyle18.copyWith(
+        style: Styles.textStyle20.copyWith(
           color: AppColors.redColor,
         ),
       ),

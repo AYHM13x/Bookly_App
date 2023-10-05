@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../core/utils/dimensions_of_screen.dart';
-import 'presentation/views/bodies/book_details_view_body.dart';
+import 'presentation/views/widgets/bodies/book_details_view_body.dart';
 
 class BookDetailsView extends StatelessWidget {
   const BookDetailsView({super.key});

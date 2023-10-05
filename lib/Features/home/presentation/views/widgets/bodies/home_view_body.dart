@@ -2,13 +2,13 @@ import 'package:bookly_app/constents.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../core/utils/app_router.dart';
-import '../../../../../core/utils/assets.dart';
-import '../../../../../core/utils/dimensions_of_screen.dart';
-import '../../../../../core/utils/styles.dart';
-import '../widgets/Custom_widgets/custom_home_app_bar.dart';
-import '../widgets/newest_books_list_view.dart';
-import '../widgets/book_cards_home_list_view.dart';
+import '../../../../../../core/utils/app_router.dart';
+import '../../../../../../core/utils/assets.dart';
+import '../../../../../../core/utils/dimensions_of_screen.dart';
+import '../../../../../../core/utils/styles.dart';
+import '../Custom_widgets/custom_home_app_bar.dart';
+import '../newest_books_list_view.dart';
+import '../book_cards_home_list_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({
@@ -42,8 +42,8 @@ class HomeViewBody extends StatelessWidget {
                 padding: EdgeInsets.symmetric(
                   horizontal: DimensionsOfScreen.dimensionsOfWidth(context, 2),
                 ),
-                child: const Text(
-                  "Newest Books Of $kAllNewestFreeBooks:",
+                child: Text(
+                  "Newest Books Of ${kAllNewestFreeBooks[0].toUpperCase()}${kAllNewestFreeBooks.substring(1)}:",
                   style: Styles.textStyle18,
                 ),
               ),

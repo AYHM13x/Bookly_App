@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/dimensions_of_screen.dart';
-import 'book_card_item.dart';
-import 'pay_and_free_preview_buttons.dart';
-import 'text_of_detail_of_book_view.dart';
+import '10_book_card_item.dart';
+import '22_pay_and_free_preview_buttons.dart';
+import '21_text_of_detail_of_book_view.dart';
 
-class DetailBookSection extends StatelessWidget {
-  const DetailBookSection({super.key});
+class DetailBookSectionInDetailBookView extends StatelessWidget {
+  const DetailBookSectionInDetailBookView({super.key});
 
   @override
   Widget build(BuildContext context) {

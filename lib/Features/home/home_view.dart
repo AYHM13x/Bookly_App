@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../core/utils/dimensions_of_screen.dart';
-import 'presentation/views/bodies/home_view_body.dart';
+import 'presentation/views/widgets/bodies/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
