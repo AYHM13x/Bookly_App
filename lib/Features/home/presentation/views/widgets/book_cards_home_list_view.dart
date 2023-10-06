@@ -6,8 +6,8 @@ import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/utils/dimensions_of_screen.dart';
 import '../../view_models/all_books_cubits/all_books_cubit.dart';
 import 'Custom_widgets/custom_circular_and_Linear_indicator.dart';
-import '../../../../../core/widgets/custom_widgets/failures/failure_message_view.dart';
-import '../../../../../core/widgets/custom_widgets/failures/unknown_failure_view.dart';
+import '../../../../../core/widgets/custom_widgets/failures/failure_message_widget.dart';
+import '../../../../../core/widgets/custom_widgets/failures/unknown_failure_widget.dart';
 import 'book_item_widgets/10_book_card_item.dart';
 
 class BookCardsHomeListView extends StatelessWidget {
@@ -32,7 +32,8 @@ class BookCardsHomeListView extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: GestureDetector(
                     onTap: () {
-                      GoRouter.of(context).push(AppRouter.bookDetailsViewPath);
+                      GoRouter.of(context).push(AppRouter.bookDetailsViewPath,
+                          extra: state.books[index]);
                     },
                     child: BookCardItemView(
                       imageUrl:
@@ -44,13 +45,15 @@ class BookCardsHomeListView extends StatelessWidget {
               },
             );
           } else if (state is AllBooksLoading) {
-            return const CustomLinearProgressIndicator();
+            return const CustomIndicator(
+              indeicatorType: 1,
+            );
           } else if (state is AllBooksFailure) {
-            return FailureMessageView(
+            return FailureMessageWidget(
               errMessage: state.errMessage,
             );
           } else {
-            return const UnknownFailureView();
+            return const UnknownFailureWidget();
           }
         },
       ),

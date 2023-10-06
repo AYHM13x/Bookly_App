@@ -2,6 +2,19 @@ import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/app_colors.dart';
 
+class CustomIndicator extends StatelessWidget {
+  const CustomIndicator({super.key, this.indeicatorType = 2});
+  final int indeicatorType;
+  @override
+  Widget build(BuildContext context) {
+    if (indeicatorType == 1) {
+      return const CustomLinearProgressIndicator();
+    } else {
+      return const CustomCircularIndicator();
+    }
+  }
+}
+
 class CustomCircularIndicator extends StatelessWidget {
   const CustomCircularIndicator({
     super.key,

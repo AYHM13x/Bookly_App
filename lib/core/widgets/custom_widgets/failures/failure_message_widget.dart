@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../utils/app_colors.dart';
 import '../../../utils/styles.dart';
 
-class FailureMessageView extends StatelessWidget {
-  const FailureMessageView({
+class FailureMessageWidget extends StatelessWidget {
+  const FailureMessageWidget({
     super.key,
     required this.errMessage,
   });

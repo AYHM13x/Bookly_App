@@ -1,3 +1,4 @@
+import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../constents.dart';
@@ -8,8 +9,9 @@ import '../../../../../../core/widgets/custom_widgets/custom_button.dart';
 class PayAndFreePreviewButtons extends StatelessWidget {
   const PayAndFreePreviewButtons({
     super.key,
+    required this.book,
   });
-  final double height = 48;
+  final BookModel book;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -17,7 +19,7 @@ class PayAndFreePreviewButtons extends StatelessWidget {
       children: [
         Expanded(
           child: CustomButton(
-            text: "19.99$kEuroSympol",
+            text: "Free",
             style: Styles.textStyle18.copyWith(
               fontWeight: FontWeight.w600,
               color: AppColors.primaryColor,

@@ -1,8 +1,8 @@
 import 'package:bookly_app/Features/home/presentation/view_models/newest_books_cubits/newest_books_cubit.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/Custom_widgets/custom_circular_and_Linear_indicator.dart';
 import 'package:bookly_app/core/utils/dimensions_of_screen.dart';
-import 'package:bookly_app/core/widgets/custom_widgets/failures/failure_message_view.dart';
-import 'package:bookly_app/core/widgets/custom_widgets/failures/unknown_failure_view.dart';
+import 'package:bookly_app/core/widgets/custom_widgets/failures/failure_message_widget.dart';
+import 'package:bookly_app/core/widgets/custom_widgets/failures/unknown_failure_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -30,7 +30,8 @@ class NewestBooksListView extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 4),
                 child: GestureDetector(
                   onTap: () {
-                    GoRouter.of(context).push(AppRouter.bookDetailsViewPath);
+                    GoRouter.of(context).push(AppRouter.bookDetailsViewPath,
+                        extra: state.newestBooks[index]);
                   },
                   child: BookItemView(
                     book: state.newestBooks[index],
@@ -43,16 +44,16 @@ class NewestBooksListView extends StatelessWidget {
           return SizedBox(
             height: DimensionsOfScreen.dimensionsOfHeight(context, 45),
             child: const Center(
-              child: CustomCircularIndicator(),
+              child: CustomIndicator(),
             ),
           );
         } else if (state is NewestBooksFailure) {
           return SizedBox(
               height: DimensionsOfScreen.dimensionsOfHeight(context, 45),
-              child: FailureMessageView(errMessage: state.errMessage));
+              child: FailureMessageWidget(errMessage: state.errMessage));
         } else {
           return const Center(
-            child: UnknownFailureView(),
+            child: UnknownFailureWidget(),
           );
         }
       },

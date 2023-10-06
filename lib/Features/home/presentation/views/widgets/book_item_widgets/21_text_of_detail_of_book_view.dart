@@ -6,14 +6,14 @@ import '../../../../../../core/utils/styles.dart';
 import '14_rating_of_book_item.dart';
 
 class TextOfDetailOfBookView extends StatelessWidget {
-  const TextOfDetailOfBookView({super.key});
-
+  const TextOfDetailOfBookView({super.key, required this.book});
+  final BookModel book;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text(
-          "The Jungle Book",
+        Text(
+          book.volumeInfo.title!,
           style: Styles.textStyle30,
         ),
         const SizedBox(
@@ -22,7 +22,7 @@ class TextOfDetailOfBookView extends StatelessWidget {
         Opacity(
           opacity: .7,
           child: Text(
-            "Rudyard Kipling",
+            book.volumeInfo.authors![0],
             style: Styles.textStyle18.copyWith(
               fontWeight: FontWeight.w500,
               fontStyle: FontStyle.italic,
@@ -32,8 +32,8 @@ class TextOfDetailOfBookView extends StatelessWidget {
         const SizedBox(
           height: 17,
         ),
-        const RatingOfBookItem(
-          book: BookModel(volumeInfo: VolumeInfo()),
+        RatingOfBookItem(
+          book: book,
         ),
       ],
     );

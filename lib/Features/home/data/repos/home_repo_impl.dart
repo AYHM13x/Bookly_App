@@ -71,7 +71,7 @@ class HomeRepoImpl implements HomeRepo {
   Future<Either<Failure, List<BookModel>>> fetchSimilarBooks(
       {required String category}) async {
     String allSimilarBooks =
-        "volumes?Filtering=free-ebooks&Sorting=relevance&maxResults=40&q=intitle:programming";
+        "volumes?Filtering=free-ebooks&Sorting=relevance&maxResults=40&q=subject:$category";
     try {
       Map<String, dynamic> data =
           await apiService.get(endPoint: allSimilarBooks);

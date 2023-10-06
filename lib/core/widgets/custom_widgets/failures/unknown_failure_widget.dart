@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../utils/app_colors.dart';
 import '../../../utils/styles.dart';
 
-class UnknownFailureView extends StatelessWidget {
-  const UnknownFailureView({
+class UnknownFailureWidget extends StatelessWidget {
+  const UnknownFailureWidget({
     super.key,
   });
 

@@ -27,7 +27,7 @@ class BookCardItemView extends StatelessWidget {
               return child;
             }
             return const Center(
-              child: CustomCircularIndicator(),
+              child: CustomIndicator(),
             );
           },
           errorBuilder: (context, error, stackTrace) {
