@@ -1,5 +1,6 @@
 import 'package:bookly_app/Features/home/presentation/view_models/newest_books_cubits/newest_books_cubit.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/Custom_widgets/custom_circular_and_Linear_indicator.dart';
+import 'package:bookly_app/core/utils/dimensions_of_screen.dart';
 import 'package:bookly_app/core/widgets/custom_widgets/failures/failure_message_view.dart';
 import 'package:bookly_app/core/widgets/custom_widgets/failures/unknown_failure_view.dart';
 import 'package:flutter/material.dart';
@@ -39,13 +40,16 @@ class NewestBooksListView extends StatelessWidget {
             },
           );
         } else if (state is NewestBooksLoading) {
-          return const Center(
-            child: CustomLinearProgressIndicator(),
+          return SizedBox(
+            height: DimensionsOfScreen.dimensionsOfHeight(context, 45),
+            child: const Center(
+              child: CustomCircularIndicator(),
+            ),
           );
         } else if (state is NewestBooksFailure) {
-          return Center(
-            child: FailureMessageView(errMessage: state.errMessage),
-          );
+          return SizedBox(
+              height: DimensionsOfScreen.dimensionsOfHeight(context, 45),
+              child: FailureMessageView(errMessage: state.errMessage));
         } else {
           return const Center(
             child: UnknownFailureView(),

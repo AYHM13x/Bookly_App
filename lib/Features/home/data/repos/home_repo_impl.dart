@@ -4,6 +4,7 @@ import 'package:bookly_app/core/errors/failures.dart';
 import 'package:bookly_app/core/utils/api_service.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 
 import '../../../../constents.dart';
 
@@ -22,11 +23,17 @@ class HomeRepoImpl implements HomeRepo {
       Map<String, dynamic> data =
           await apiService.get(endPoint: _newestFreeBooks);
       List<BookModel> books = [];
-      for (var item in data["items"]) {
+      for (var item in data["items"] ?? []) {
         books.add(BookModel.fromJson(item));
       }
-      return right(books);
+
+      if (books.isNotEmpty) {
+        return right(books);
+      } else {
+        return left(ServerFailure("there are no books"));
+      }
     } catch (e) {
+      debugPrint(e.toString());
       if (e is DioException) {
         return left(
           ServerFailure.fromDioException(e),
@@ -41,12 +48,15 @@ class HomeRepoImpl implements HomeRepo {
     try {
       Map<String, dynamic> data = await apiService.get(endPoint: _allFreeBooks);
       List<BookModel> books = [];
-      //debugPrint(data["items"].runtimeType.toString());
-      for (var item in data["items"]) {
+
+      for (var item in data["items"] ?? []) {
         books.add(BookModel.fromJson(item));
       }
-
-      return right(books);
+      if (books.isNotEmpty) {
+        return right(books);
+      } else {
+        return left(ServerFailure("there are no books"));
+      }
     } catch (e) {
       if (e is DioException) {
         return left(

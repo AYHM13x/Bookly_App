@@ -11,7 +11,7 @@ const kRoboto = "Roboto";
 
 //sreach subjects
 const kAllFreeBooks = "secret";
-const kAllNewestFreeBooks = "people";
+const kAllNewestFreeBooks = "cppmputer science";
 
 //error image
 const kErrorImage =

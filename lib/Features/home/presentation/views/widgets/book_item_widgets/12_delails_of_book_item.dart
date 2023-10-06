@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../../constents.dart';
 import '../../../../../../core/utils/styles.dart';
-import '14_price_and_rating_of_book_item.dart';
+import '13_price_and_rating_of_book_item.dart';
 
 class DetailsBookItem extends StatelessWidget {
   const DetailsBookItem({
