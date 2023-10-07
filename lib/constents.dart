@@ -10,8 +10,8 @@ const kMontserrat = "Montserrat";
 const kRoboto = "Roboto";
 
 //sreach subjects
-const kAllFreeBooks = "secret";
-const kAllNewestFreeBooks = "computer science";
+const kAllFreeBooks = "harry potter";
+const kAllNewestFreeBooks = "head first";
 
 //error image
 const kErrorImage =

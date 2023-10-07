@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../core/utils/dimensions_of_screen.dart';
-import '../../core/utils/service_locater.dart';
-import 'data/repos/home_repo_impl.dart';
 import 'presentation/views/widgets/bodies/book_details_view_body.dart';
 
 class BookDetailsView extends StatefulWidget {

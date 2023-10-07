@@ -8,7 +8,7 @@ import '../book_item_widgets/24_similar_book_section.dart';
 
 class BookDetailsViewBodyOldVersion extends StatelessWidget {
   const BookDetailsViewBodyOldVersion({super.key, required this.book});
-final BookModel book;
+  final BookModel book;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -21,7 +21,7 @@ final BookModel book;
           //AppBar
           const CustomBookDetailAppBar(),
           //Book Card
-           DetailBookSectionInDetailBookView(book: book),
+          DetailBookSectionInDetailBookView(book: book),
           SizedBox(
             height: DimensionsOfScreen.dimensionsOfHeight(context, 6.85),
           ),
@@ -72,10 +72,10 @@ class BookDetailsViewBodyNewVersion extends StatelessWidget {
 
 class BookDetailsViewBodySamyVersion extends StatelessWidget {
   const BookDetailsViewBodySamyVersion({super.key, required this.book});
-final BookModel book;
+  final BookModel book;
   @override
   Widget build(BuildContext context) {
-    return  CustomScrollView(
+    return CustomScrollView(
       slivers: [
         SliverFillRemaining(
           hasScrollBody: false,

@@ -1,5 +1,4 @@
 import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
-import 'package:bookly_app/Features/home/data/models/book_model/volume_info.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/styles.dart';
@@ -13,8 +12,9 @@ class TextOfDetailOfBookView extends StatelessWidget {
     return Column(
       children: [
         Text(
-          book.volumeInfo.title!,
+          book.volumeInfo.title ?? "there is no title",
           style: Styles.textStyle30,
+          textAlign: TextAlign.center,
         ),
         const SizedBox(
           height: 8,
@@ -22,7 +22,10 @@ class TextOfDetailOfBookView extends StatelessWidget {
         Opacity(
           opacity: .7,
           child: Text(
-            book.volumeInfo.authors![0],
+            book.volumeInfo.authors != null
+                ? book.volumeInfo.authors![0]
+                : "there are no authors",
+            textAlign: TextAlign.center,
             style: Styles.textStyle18.copyWith(
               fontWeight: FontWeight.w500,
               fontStyle: FontStyle.italic,

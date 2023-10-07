@@ -21,7 +21,6 @@ class CustomBookDetailAppBar extends StatelessWidget {
             color: AppColors.whiteColor,
           ),
           onPressed: () {
-            //Get.back();
             GoRouter.of(context).pop();
           },
         ),

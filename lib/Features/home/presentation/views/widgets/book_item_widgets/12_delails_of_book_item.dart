@@ -37,6 +37,8 @@ class DetailsBookItem extends StatelessWidget {
               book.volumeInfo.authors != null
                   ? book.volumeInfo.authors![0]
                   : "there are no authors Avalible",
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
               style: Styles.textStyle14.copyWith(
                 fontWeight: FontWeight.w500,
                 fontStyle: FontStyle.italic,

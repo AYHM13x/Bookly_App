@@ -29,10 +29,8 @@ class ServerFailure extends Failure {
         return ServerFailure('Request to ApiServer was canceled');
 
       case DioExceptionType.unknown:
-        debugPrint(dioException.message);
         return ServerFailure('Unexpected Error, Please try again!');
       default:
-        debugPrint(dioException.message);
         if (dioException.message!.contains("Failed host lookup:")) {
           return ServerFailure('No Internet Connection');
         }

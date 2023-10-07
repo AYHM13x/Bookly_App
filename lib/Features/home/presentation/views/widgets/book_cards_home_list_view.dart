@@ -22,7 +22,6 @@ class BookCardsHomeListView extends StatelessWidget {
       child: BlocBuilder<AllBooksCubit, AllBooksState>(
         builder: (context, state) {
           if (state is AllBooksSuccess) {
-            debugPrint(state.books.length.toString());
             return ListView.builder(
               physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
