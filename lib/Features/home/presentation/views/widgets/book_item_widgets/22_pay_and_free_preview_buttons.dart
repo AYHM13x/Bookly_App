@@ -1,10 +1,12 @@
-import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
+import 'package:bookly_app/core/widgets/custom_widgets/show_snackbar.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../constents.dart';
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/styles.dart';
 import '../../../../../../core/widgets/custom_widgets/custom_button.dart';
+import '../../../../data/models/book_model/book_model.dart';
 
 class PayAndFreePreviewButtons extends StatelessWidget {
   const PayAndFreePreviewButtons({
@@ -28,9 +30,7 @@ class PayAndFreePreviewButtons extends StatelessWidget {
             borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(kBorderRadiusValue),
                 bottomLeft: Radius.circular(kBorderRadiusValue)),
-            onPressed: () {
-              //debugPrint("pay");
-            },
+            onPressed: () async {},
           ),
         ),
         Expanded(
@@ -46,8 +46,18 @@ class PayAndFreePreviewButtons extends StatelessWidget {
               topRight: Radius.circular(kBorderRadiusValue),
               bottomRight: Radius.circular(kBorderRadiusValue),
             ),
-            onPressed: () {
-              //debugPrint("Free preview");
+            onPressed: () async {
+              String urlNotFound = "";
+              final Uri url =
+                  Uri.parse(book.accessInfo?.pdf?.acsTokenLink ?? urlNotFound);
+              debugPrint(url.toString());
+              if (url.toString() != urlNotFound) {
+                if (!await launchUrl(url)) {
+                  throw Exception('Could not launch $url');
+                }
+              } else {
+                showSnackBar(context, "Free Preview is not Available");
+              }
             },
           ),
         )
