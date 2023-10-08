@@ -1,7 +1,7 @@
-import 'package:bookly_app/constents.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../../../constents.dart';
 import '../../../../../../core/utils/app_router.dart';
 import '../../../../../../core/utils/assets.dart';
 import '../../../../../../core/utils/dimensions_of_screen.dart';

@@ -10,7 +10,7 @@ const kMontserrat = "Montserrat";
 const kRoboto = "Roboto";
 
 //sreach subjects
-const kAllFreeBooks = "Harry Potter and the Deathly Hallows";
+const kAllFreeBooks = "Harry Potter";
 const kAllNewestFreeBooks = "head first";
 
 //error image

@@ -1,9 +1,9 @@
-import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../../core/utils/assets.dart';
 import '../../../../../../core/utils/styles.dart';
+import '../../../../data/models/book_model/book_model.dart';
 
 class RatingOfBookItem extends StatelessWidget {
   const RatingOfBookItem({super.key, required this.book});
@@ -26,7 +26,7 @@ class RatingOfBookItem extends StatelessWidget {
         Text(
           book.volumeInfo.averageRating != null
               ? book.volumeInfo.averageRating.toString()
-              : "not Avalible",
+              : "??",
           style: Styles.textStyle16,
         ),
         const SizedBox(
@@ -37,7 +37,7 @@ class RatingOfBookItem extends StatelessWidget {
           child: Text(
             book.volumeInfo.ratingsCount != null
                 ? "(${book.volumeInfo.ratingsCount.toString()})"
-                : "not Avalible",
+                : "(??)",
             style: Styles.textStyle14.copyWith(
               fontWeight: FontWeight.w400,
             ),

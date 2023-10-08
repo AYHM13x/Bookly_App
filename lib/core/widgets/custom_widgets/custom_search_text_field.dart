@@ -1,8 +1,7 @@
-// ignore_for_file: must_be_immutable
-
-import 'package:bookly_app/constents.dart';
-import 'package:bookly_app/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
+
+import '../../../constents.dart';
+import '../../utils/app_colors.dart';
 
 class CustomSearchTextField extends StatelessWidget {
   const CustomSearchTextField({

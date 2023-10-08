@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/dimensions_of_screen.dart';
 import '../../../../data/models/book_model/book_model.dart';
-import '10_book_card_item.dart';
-import '22_pay_and_free_preview_buttons.dart';
-import '21_text_of_detail_of_book_view.dart';
+import '_10_book_card_item.dart';
+import '_22_pay_and_free_preview_buttons.dart';
+import '_21_text_of_detail_of_book_view.dart';
 
 class DetailBookSectionInDetailBookView extends StatelessWidget {
   const DetailBookSectionInDetailBookView({super.key, required this.book});

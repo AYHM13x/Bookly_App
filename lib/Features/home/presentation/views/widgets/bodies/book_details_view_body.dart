@@ -1,10 +1,10 @@
-import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/dimensions_of_screen.dart';
+import '../../../../data/models/book_model/book_model.dart';
 import '../Custom_widgets/custom_book_detail_app_bar.dart';
-import '../book_item_widgets/23_detail_book_section_in_detail_book_view.dart';
-import '../book_item_widgets/24_similar_book_section.dart';
+import '../book_item_widgets/_23_detail_book_section_in_detail_book_view.dart';
+import '../book_item_widgets/_24_similar_book_section.dart';
 
 class BookDetailsViewBodyOldVersion extends StatelessWidget {
   const BookDetailsViewBodyOldVersion({super.key, required this.book});

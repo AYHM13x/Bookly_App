@@ -1,9 +1,9 @@
-import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/dimensions_of_screen.dart';
-import '10_book_card_item.dart';
-import '12_delails_of_book_item.dart';
+import '../../../../data/models/book_model/book_model.dart';
+import '_10_book_card_item.dart';
+import '_12_delails_of_book_item.dart';
 
 class BookItemView extends StatelessWidget {
   const BookItemView({super.key, required this.book});

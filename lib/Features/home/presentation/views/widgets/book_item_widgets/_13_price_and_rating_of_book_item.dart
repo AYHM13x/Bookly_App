@@ -1,8 +1,8 @@
-import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/styles.dart';
-import '14_rating_of_book_item.dart';
+import '../../../../data/models/book_model/book_model.dart';
+import '_14_rating_of_book_item.dart';
 
 class PriceAndRateOfBookItem extends StatelessWidget {
   const PriceAndRateOfBookItem({super.key, required this.book});

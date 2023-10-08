@@ -1,9 +1,9 @@
-import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../constents.dart';
 import '../../../../../../core/utils/styles.dart';
-import '13_price_and_rating_of_book_item.dart';
+import '../../../../data/models/book_model/book_model.dart';
+import '_13_price_and_rating_of_book_item.dart';
 
 class DetailsBookItem extends StatelessWidget {
   const DetailsBookItem({
@@ -36,7 +36,7 @@ class DetailsBookItem extends StatelessWidget {
             child: Text(
               book.volumeInfo.authors != null
                   ? book.volumeInfo.authors![0]
-                  : "there are no authors Avalible",
+                  : "there are no authors Available",
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: Styles.textStyle14.copyWith(

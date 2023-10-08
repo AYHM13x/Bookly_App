@@ -1,10 +1,10 @@
-import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
-import 'package:bookly_app/Features/home/data/models/book_model/volume_info.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../../../../core/utils/app_router.dart';
-import '../../../../home/presentation/views/widgets/book_item_widgets/11_book_item_view.dart';
+import '../../../../home/data/models/book_model/book_model.dart';
+import '../../../../home/data/models/book_model/volume_info.dart';
+import '../../../../home/presentation/views/widgets/book_item_widgets/_11_book_item_view.dart';
 
 class BookListView extends StatelessWidget {
   const BookListView({

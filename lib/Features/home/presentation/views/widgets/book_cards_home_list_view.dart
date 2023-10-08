@@ -5,10 +5,10 @@ import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/utils/dimensions_of_screen.dart';
 import '../../view_models/all_books_cubits/all_books_cubit.dart';
-import 'Custom_widgets/custom_circular_and_Linear_indicator.dart';
+import 'Custom_widgets/custom_indicator.dart';
 import '../../../../../core/widgets/custom_widgets/failures/failure_message_widget.dart';
 import '../../../../../core/widgets/custom_widgets/failures/unknown_failure_widget.dart';
-import 'book_item_widgets/10_book_card_item.dart';
+import 'book_item_widgets/_10_book_card_item.dart';
 
 class BookCardsHomeListView extends StatelessWidget {
   const BookCardsHomeListView({

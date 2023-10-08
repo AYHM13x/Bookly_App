@@ -1,14 +1,14 @@
-import 'package:bookly_app/Features/home/presentation/view_models/newest_books_cubits/newest_books_cubit.dart';
-import 'package:bookly_app/Features/home/presentation/views/widgets/Custom_widgets/custom_circular_and_Linear_indicator.dart';
-import 'package:bookly_app/core/utils/dimensions_of_screen.dart';
-import 'package:bookly_app/core/widgets/custom_widgets/failures/failure_message_widget.dart';
-import 'package:bookly_app/core/widgets/custom_widgets/failures/unknown_failure_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/app_router.dart';
-import 'book_item_widgets/11_book_item_view.dart';
+import '../../../../../core/utils/dimensions_of_screen.dart';
+import '../../../../../core/widgets/custom_widgets/failures/failure_message_widget.dart';
+import '../../../../../core/widgets/custom_widgets/failures/unknown_failure_widget.dart';
+import '../../view_models/newest_books_cubits/newest_books_cubit.dart';
+import 'Custom_widgets/custom_indicator.dart';
+import 'book_item_widgets/_11_book_item_view.dart';
 
 class NewestBooksListView extends StatelessWidget {
   const NewestBooksListView({

@@ -1,13 +1,13 @@
-import 'package:bookly_app/Features/home/presentation/view_models/similar_books_cubit/similar_books_cubit.dart';
-import 'package:bookly_app/Features/home/presentation/views/widgets/Custom_widgets/custom_circular_and_Linear_indicator.dart';
-import 'package:bookly_app/core/widgets/custom_widgets/failures/failure_message_widget.dart';
-import 'package:bookly_app/core/widgets/custom_widgets/failures/unknown_failure_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/app_router.dart';
-import 'book_item_widgets/10_book_card_item.dart';
+import '../../../../../core/widgets/custom_widgets/failures/failure_message_widget.dart';
+import '../../../../../core/widgets/custom_widgets/failures/unknown_failure_widget.dart';
+import '../../view_models/similar_books_cubit/similar_books_cubit.dart';
+import 'Custom_widgets/custom_indicator.dart';
+import 'book_item_widgets/_10_book_card_item.dart';
 
 class SimilarBookListView extends StatelessWidget {
   const SimilarBookListView({
